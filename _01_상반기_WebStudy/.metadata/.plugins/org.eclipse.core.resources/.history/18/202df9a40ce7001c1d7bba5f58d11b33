@@ -1,0 +1,6 @@
+CREATE SEQUENCE seq_member_member_idx;
+
+CREATE TABLE recruit
+(
+   member_idx  int,
+);

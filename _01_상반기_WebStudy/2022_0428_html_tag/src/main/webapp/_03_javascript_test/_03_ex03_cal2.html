@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	var regular_number = /^[0-9]{1,4}$/; //1~4자리의 숫자
+	
+	//입력컨트롤 정보를 얻어온다.
+	var su1_ctrl = null;
+	var su2_ctrl = null;
+	var result_ctrl = null;
+	
+	//윈도우 초기화 이벤트 (모든 Element 배치가 완료되면)
+	/*
+	function init(){}
+	window.onload = init; */
+	//               익명 함수() : 이름 없는 함수
+	window.onload = function(){
+		su1_ctrl = document.getElementById("su1");
+		su2_ctrl = document.getElementById("su2");
+		result_ctrl = document.getElementById("result");
+	};
+
+    function plus(){
+    	//css
+    	//su1_ctrl.style.display = "none"; //hide
+    	//su1_ctrl.style.marginLeft = '10px';
+    	var su1 = su1_ctrl.value; //입력창으로 들어온 건 문자
+    	var su2 = su2_ctrl.value;
+    	
+    	//정규표현식에 부합되는지 확인
+    	if (regular_number.test(su1) == false && regular_number.test(su2) == false){
+    		alert("1~4자리 숫자만 입력하세요.");
+    		su1_ctrl.value = ''; //값지우기
+    		su2_ctrl.value = ''; //값지우기
+    	}
+    	
+    	else if (regular_number.test(su1) == false){
+    		alert("1~4자리 숫자만 입력하세요.");
+    		su1_ctrl.value = ''; //값지우기
+    		su1_ctrl.focus(); //입력포커스 지정
+    	}
+    	
+    	else if (regular_number.test(su2) == false){
+    		alert("1~4자리 숫자만 입력하세요.");
+    		su2_ctrl.value = ''; //값지우기
+    		su2_ctrl.focus(); //입력포커스 지정
+    	}
+    	
+    	//결과값 넣기
+    	//result_ctrl.value = Number(su1) + Number(su2);
+    	var result = parseInt(su1) + parseInt(su2); //문자를 더할 경우 (ex. 1 + a) : NaN(Not a Number)
+    	result_ctrl.value = result;
+    }
+    
+    function minus(){
+    	//입력 컨트롤 정보를 얻어온다.
+    	let su1_ctrl = document.getElementById("su1");
+    	let su2_ctrl = document.getElementById("su2");
+    	let result_ctrl = document.getElementById("result");
+    	
+    	//값을 읽어온다
+    	let su1 = su1_ctrl.value;
+    	let su2 = su2_ctrl.value;
+    	
+    	//정규식으로 입력값의 포맷을 확인한다.
+    	if (regular_number.test(su1) == false){
+    		alert("1~4자리의 숫자를 입력하세요.");
+    		su1_ctrl.value = '';
+    		su1_ctrl.focus();
+    	}
+    	
+    	if (regular_number.test(su2) == false){
+    		alert("1~4자리의 숫자를 입력하세요.");
+    		su2_ctrl.value = '';
+    		su2_ctrl.focus();
+    	}
+    	
+    	//결과 입력창에 값을 출력한다.
+    	let result = Number(su1) - Number(su2);
+    	result_ctrl.value = result;
+    	
+    }
+    
+    function multiply(){
+    	//입력 컨트롤 정보 가져오기
+    	let su1_ctrl = document.getElementById("su1");
+    	let su2_ctrl = document.getElementById("su2");
+    	let result_ctrl = document.getElementById("result");
+    	
+    	//입력값 읽기
+    	let su1 = su1_ctrl.value;
+    	let su2 = su2_ctrl.value;
+    	
+    	//값의 범위 조회하기
+    	if (regular_number.test(su1) == false){
+    		alert("1~4자리의 숫자를 입력하세요.");
+    		su1_ctrl.value = '';
+    		su1_ctrl.focus();
+    	}
+    	
+    	if (regular_number.test(su2) == false){
+    		alert("1~4자리의 숫자를 입력하세요.");
+    		su2_ctrl.value = '';
+    		su2_ctrl.focus();
+    	}
+    	
+    	//결과 값 출력하기
+    	let result = Number(su1) * Number(su2);
+    	result_ctrl.value = result;	
+    }
+    
+    function divide(){
+    	//입력 컨트롤 정보 가져오기
+    	let su1_ctrl = document.getElementById("su1");
+    	let su2_ctrl = document.getElementById("su2");
+    	let result_ctrl = document.getElementById("result");
+    	
+    	//입력값 조회하기
+    	let su1 = su1_ctrl.value;
+    	let su2 = su2_ctrl.value;
+    	
+    	//값의 범위 확인하기 
+    	if (regular_number.test(su1) == false){
+    		alert("1~4자리의 숫자를 입력하세요.");
+    		su1_ctrl.value = '';
+    		su1_ctrl.focus();
+    	}
+    	
+    	if (regular_number.test(su2) == false){
+    		alert("1~4자리의 숫자를 입력하세요.");
+    		su2_ctrl.value = '';
+    		su2_ctrl.focus();
+    	}
+    	
+    	//결과 값 출력하기
+    	let result = Number(su1) / Number(su2);
+    	result = result * 100;
+    	result_ctrl.value = Math.floor(result,1)/100;
+    }
+    
+    function mod(){
+    	//입력 컨트롤 정보 조회하기
+    	let su1_ctrl = document.getElementById("su1");
+    	let su2_ctrl = document.getElementById("su2");
+    	let result_ctrl = document.getElementById("result");
+    	
+    	//입력값 조회하기
+    	let su1 = su1_ctrl.value;
+    	let su2 = su2_ctrl.value;
+    	
+    	//값의 범위 확인하기 
+    	if (regular_number.test(su1) == false){
+    		alert("1~4자리의 숫자를 입력하세요.");
+    		su1_ctrl.value = '';
+    		su1_ctrl.focus();
+    	}
+    	
+    	if (regular_number.test(su2) == false){
+    		alert("1~4자리의 숫자를 입력하세요.");
+    		su2_ctrl.value = '';
+    		su2_ctrl.focus();
+    	}
+    	
+    	//결과 값 출력하기
+    	let result = Number(su1) % Number(su2);
+    	result_ctrl.value = result;
+    }
+    
+    function exp(){
+    	//입력 컨트롤 정보 조회하기
+    	let su1_ctrl = document.getElementById("su1");
+    	let su2_ctrl = document.getElementById("su2");
+    	let result_ctrl = document.getElementById("result");
+    	
+    	//입력값 조회하기
+    	let su1 = su1_ctrl.value;
+    	let su2 = su2_ctrl.value;
+    	
+    	//값의 범위 확인하기 
+    	if (regular_number.test(su1) == false){
+    		alert("1~4자리의 숫자를 입력하세요.");
+    		su1_ctrl.value = '';
+    		su1_ctrl.focus();
+    	}
+    	
+    	if (regular_number.test(su2) == false){
+    		alert("1~4자리의 숫자를 입력하세요.");
+    		su2_ctrl.value = '';
+    		su2_ctrl.focus();
+    	}
+    	
+    	//결과 값 출력하기
+    	let result = 1;
+    	for(let i = 0; i < Number(su2); i++){ result *= Number(su1) }
+    	result_ctrl.value = result;
+    }
+    
+</script>
+</head>
+<body>
+수1 : <input id = "su1"><br>
+수2 : <input id = "su2"><br>
+<input type = "button" value = "+"  onclick = "javascript:plus();">
+<input type = "button" value = "-"  onclick = "javascript:minus();">
+<input type = "button" value = "*"  onclick = "javascript:multiply();">
+<input type = "button" value = "/"  onclick = "javascript:divide();">
+<input type = "button" value = "%"  onclick = "javascript:mod()">
+<input type = "button" value = "**" onclick = "javascript:exp()">
+<br>
+결과 : <input id = "result">
+</body>
+</html>

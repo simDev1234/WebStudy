@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+   * {
+       margin : 0; font-size : 0;
+       /* span에서 줄바꿈으로인해 공백이 발생 
+          (해결방법 : font-size나 padding을 상위객체에서 0으로 잡아준다)
+          - font-size:0;
+       */
+     }
+
+   span{
+      display : inline-block;
+      width  : 60px;
+      height : 60px;
+      background : black;
+      color : white;
+      text-align : center;
+      font-size : 40px;
+      margin : 0;
+   }
+   
+   .colon{
+      width : 20px;
+   }
+</style>
+<script type="text/javascript">
+
+   //윈도우 이벤트 초기화
+   window.onload = function(){
+	   
+	   //타이머 구동 -> 호출주기(1/1000)
+	   //setTimeout(함수명, 호출주기);  : 1회 호출
+	   //setInterval(함수명, 호출주기); : 지속적 호출 (clearInterval(timer)할 때까지)
+	   //setInterval(showTime, 1000);
+	   setInterval("showTime();",500);
+	   
+   };
+   
+   var count = 0;
+   var bColon = true;
+   
+   function showTime(){
+	   //시간 구하기
+	   var today = new Date();//현재 시스템 구하기
+	   var h = today.getHours()   + ""; //char개념이 없고 string만 있음
+	   var m = today.getMinutes();
+	   var s = today.getSeconds() + '';
+	   
+	   //[조건] 무조건 2자리로 넣을 것 : 5 -> 05
+	   
+	   //시 넣기
+	   if (h.length == 1){
+		   document.getElementById("hour").innerHTML = '0'+h;
+	   }else{
+		   document.getElementById("hour").innerHTML = h;
+	   }
+	   
+	   //분 넣기
+	   if (m < 10){
+		   document.getElementById("minute").innerHTML = '0'+m;
+	   }else{
+		   document.getElementById("minute").innerHTML = m;
+	   }
+	   
+	   //초 넣기
+	   if (s.length == 1){
+		   document.getElementById("second").innerHTML = '0'+s;
+	   }else{
+		   document.getElementById("second").innerHTML = s;
+	   }
+	   
+	   //class name을 이용해서 Element정보를 얻어오기
+	   
+	   /*
+	     삼항연산자
+	     document.getElementsByClassName("colon")[1].style.color = bColon? "black" : "white";
+	   */
+	   /*
+	   if (bColon){
+		   document.getElementsByClassName("colon")[0].style.color = 'black';
+		   document.getElementsByClassName("colon")[1].style.color = 'black';
+	   }else{
+		   document.getElementsByClassName("colon")[0].style.color = 'white';
+		   document.getElementsByClassName("colon")[1].style.color = 'white';
+	   }
+	   bColon = !bColon;
+	   */
+	   
+	   var colon_ctrl_array = document.getElementsByClassName("colon");//배열로 받는다.
+	   
+	   for (var i = 0; i < colon_ctrl_array.length; i++){
+		   if (bColon){
+			   colon_ctrl_array[i].style.color = 'black';
+		   }else{
+			   colon_ctrl_array[i].style.color = 'white';
+		   }
+	   }
+	   bColon = !bColon;
+   }
+   
+</script>
+</head>
+<body>
+   <span id = "hour">00</span>
+   <span class = "colon">:</span>
+   <span id = "minute">00</span>
+   <span class = "colon">:</span>
+   <span id = "second">00</span>
+</body>
+</html>

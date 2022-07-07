@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- BootStrap3 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+   #disp{
+      width : 1000px;
+   }
+</style>
+<script type="text/javascript">
+   function find(){
+	   
+	   var deptno = $("#deptno").val();
+	   
+	   //Ajax요청
+	   $.ajax({
+		   url  : 'sawon/list.do', //SawonListAction
+		   data : {'deptno':deptno},
+		   success : function(res_data){
+			   $("#disp").html(res_data);
+		   },
+		   error   : function(err){
+			   alert(err.responseText);
+		   }
+	   });
+	   
+   }
+</script>
+</head>
+<body>
+<hr>
+  부서번호 : <select id = "deptno">
+              <option value = "0">전체</option>
+              <option value = "10">10번 부서</option>
+              <option value = "20">20번 부서</option>
+              <option value = "30">30번 부서</option>
+              <option value = "40">40번 부서</option>
+          </select>
+          <input type = "button" value = "조회" onclick = "find();">
+<hr>
+<div id = "disp"></div>
+</body>
+</html>

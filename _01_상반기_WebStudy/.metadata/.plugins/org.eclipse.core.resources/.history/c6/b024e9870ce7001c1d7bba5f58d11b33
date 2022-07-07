@@ -1,0 +1,3 @@
+CREATE SEQUENCE seq_member_member_idx;
+
+CREATE TABLE 

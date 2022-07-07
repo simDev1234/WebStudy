@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+*{
+	/* 웹 표준 준수하기 위해 동일한 조건 설정 (1. margin : 0) */
+	margin : 0; /* 브라우저마다 기본 margin이 있는 경우도 있고, 없는 경우도 있다. */
+}
+
+div{
+	
+}
+
+#main_box{
+	width  : 800px;
+	height : 600px;
+	background-color : #cccccc;
+	margin : auto; /* 수평 중앙 정렬 */
+}
+
+/* id selector는 하나의 element에만 사용 */
+#header{
+	/* width 생략 시 부모의 100%를 받는다 */
+	width : 100%;
+	height : 100px;
+	background-color : pink;
+}
+
+#content{
+	min-height : 400px; /* 최소 크기 */
+	height : auto; /* 안쪽의 콘텐츠가 늘어날 수록 자동으로 높이가 커진다. */
+	background-color : beige;
+}
+
+#footer{
+	height : 100px;
+	background : #ccccff;
+}

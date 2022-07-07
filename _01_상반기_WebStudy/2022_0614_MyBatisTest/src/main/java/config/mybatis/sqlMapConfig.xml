@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!-- typeAlias : type의 별칭 -->
+    <typeAliases>
+       <typeAlias type = "vo.SawonVo" alias = "sawon"></typeAlias>
+       <typeAlias type = "vo.GogekVo" alias = "gogek"></typeAlias>
+    </typeAliases>
+
+	<environments default="">
+		<environment id="">
+			<transactionManager type="JDBC" />
+			<dataSource type="JNDI">
+				<property name="data_source" 
+				value="java:comp/env/jdbc/test2" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="config/mybatis/mapper/sawon.xml" />
+		<mapper resource="config/mybatis/mapper/gogek.xml" />
+		<!-- 한번에 묶는 경우
+		
+		<package name = "config/mybatis/mapper"/> 
+		
+		-->
+	</mappers>
+</configuration>
+
+<!-- 
+
+[500 오류가 아래와 같이 나타난 경우]
+Cause: 
+java.lang.IllegalArgumentException: 
+Mapped Statements collection does not contain value for gogek.gogek_list
+
+(1) gogek.xml에서 오타가 났을 수 있고
+(2) sqlMapConfig.xml (여기)의 mappers에 (1)파일이 매핑되지 않아서일 수도 있다.
+
+ -->

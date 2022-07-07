@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src = "../js/MyMath.js"></script>
+<script type="text/javascript" src = "../js/MyMath_Static.js"></script>
+<script type="text/javascript">
+    // 계산용도 객체 생성
+    var mm = new MyMath();
+    var a = 10;
+    var b = 5;
+    var result = mm.max(a,b);
+    
+    console.log(a,b,result);
+    
+    result = mm.hap(a);
+    console.log(a,result);
+    
+    //정적 함수 호출
+    result = MyMath_Static.min(a,b);
+    console.log(a,b,result);
+    
+    //자바 스크립트의 기본 API 호출
+    result = Math.min(a,b);
+    console.log(a,b,result);
+</script>
+</head>
+<body>
+ 
+</body>
+</html>

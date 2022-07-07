@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+h2.applyTitle{
+	font-weight : regular;
+	margin-bottom : 20px;
+}
+
+h2.applyTitle > em{
+	font-style : normal;
+}
+
+h2.applyTitle > span{
+	color : red;
+}
+
+div#applySearch{
+	height : 120px;
+	margin-bottom : 20px;
+	background : grey;
+}
+
+div#applyTable{
+	height : 500px;
+	background : #ffff80;
+}

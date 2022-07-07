@@ -1,0 +1,14 @@
+/*
+-- 테이블 생성
+create table member
+(
+   m_idx     int,                          -- 일련번호
+   m_name    varchar2(100)  not null,      -- 이름
+   m_id      varchar2(100)  not null,      -- 아이디
+   m_pwd     varchar2(100)  not null,      -- 비밀번호
+   m_zipcode varchar2(100),                -- 우편번호
+   m_addr    varchar2(500),                -- 주소
+   m_grade   varchar2(100)  default '일반', -- 회원등급
+)
+ 
+*/

@@ -1,0 +1,30 @@
+<%@page import="myutil.Jumin"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	//parameter 받기
+	String jumin_no = request.getParameter("jumin_no");
+	
+	//--- Jumin객체
+	Jumin jumin = new Jumin();
+	jumin.setJumin_no(jumin_no);
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+   td{padding-left : 20px; padding-right : 20px;}
+</style>
+</head>
+<body>
+   <div></div>
+   <table border = '1' cellspacing = '0'>
+     <tr>
+       <th style = 'padding-left: 20px; padding-right : 20px;'>주민번호</th>
+       <td><%= jumin_no %></td>
+     </tr>
+   </table>
+</body>
+</html>

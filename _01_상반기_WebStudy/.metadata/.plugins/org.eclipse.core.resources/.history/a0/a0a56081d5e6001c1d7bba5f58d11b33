@@ -1,0 +1,5 @@
+package action.photo;
+
+public class PhotoInsertFormAction {
+
+}

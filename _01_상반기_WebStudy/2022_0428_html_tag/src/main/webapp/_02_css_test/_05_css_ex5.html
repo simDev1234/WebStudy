@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/layout2.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+<script>
+$( function() {
+  $( "#accordion" ).accordion();
+} );
+</script>
+</head>
+<body>
+  <div id = "main_box">
+    <div id = "header">header</div>
+    <div id = "aside">
+       <div id="accordion">
+		  <h3>회사소개</h3>
+		  <div>
+		    <ul>
+		      <li><a href = "#">인사말</a></li>
+		      <li><a href = "#">연혁</a></li>
+		      <li><a href = "#">오시는길</a></li>
+		    </ul>
+		  </div>
+		  <h3>상품소개</h3>
+		  <div>
+		    <ul>
+		      <li><a href = "#">신상품소개</a></li>
+		      <li><a href = "#">견적내기</a></li>
+		      <li><a href = "#">상품QnA</a></li>
+		    </ul>
+		  </div>
+		  <h3>고객센터</h3>
+		  <div>
+		    <ul>
+		      <li><a href = "#">문의게시판</a></li>
+		      <li><a href = "#">개인정보 수정</a></li>
+		    </ul>
+		  </div>
+		</div>
+    </div>
+    <div id = "content">content</div>
+    <div id = "footer">footer</div>
+  </div>
+</body>
+</html>

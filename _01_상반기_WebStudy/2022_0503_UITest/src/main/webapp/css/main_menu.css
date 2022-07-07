@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+#main_menu{
+	text-align : center;
+}
+
+#main_menu > li{
+	width : 150px;
+	display : inline-block; /* 일반적으로 메뉴는 inline-block을 사용 */
+	margin-top : 15px;
+	margin-right : 15px;
+	/* border : 1px solid black;
+	box-sizing : border-box; */
+}
+
+#main_menu > li:last-of-type{margin-right : 0px;}
+
+#main_menu > li > a{
+	display : block; /* li를 꽉 채우고자 block으로 바꾼다. */
+	text-align : center;
+	text-decoration : none;
+	font-family : 굴림체;
+	font-size   : 15pt;
+	font-weight : bold;
+	color       : #000040;
+}
+
+#main_menu > li > a:hover{
+	color       : teal;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type = "text/css">
+    h1 {
+       border : 1px solid red;
+       width : 50%;
+    }
+    span {
+       display : inline-block;
+       border : 1px solid blue;
+       width : 50%
+    }
+</style>
+</head>
+<body>
+   <!-- hr : 수평선을 긋는 태그 -->
+   <hr>
+      <h2>HeadLine Tag(h1~h6)</h2>
+   <hr>
+	   <!-- Element(요소) == Html Tag 
+	        [Block 요소] 
+	        https://www.w3schools.com/html/html_blocks.asp
+	        1. 1칸을 모두 차지 ( 폭 : 부모의 크기를 물려받는다.-body도 부모 )
+	        2. 크기 조절이 가능하다.
+	   -->
+	   <h1>h1 Tag</h1>
+	   <h2>h2 Tag</h2>
+	   <h3>h3 Tag</h3>
+	   <h4>h4 Tag</h4>
+	   <h5>h5 Tag</h5> <!-- shift + Enter하면 바로 밑으로 내려감 -->
+	   <h6>h6 Tag</h6>
+	   <!-- h7은 안 된다. -->
+   
+   <!-- font:tab size:attribute(속성) 
+        [inline 요소]
+        1. 줄바꿈이 안 된다 (수평으로 배치)
+        2. 크기 조절이 안된다.
+   -->
+   <hr>
+      <h2>font Tag(size1~size6)</h2>
+      <font color = "red">font tab를 이용한 글꼴의 크기를 설정하는 것은 지양해라.<br>(웹표준을 준수하지 않는다.)</font>
+      <br>
+      <font color = "blue">웹표준 : 브라우저마다 상이하게 나올 수 있으니까 동일하게 표현될 수 있도록 작업</font>
+      <br>
+      <font color = "orange">(해결방안) : CSS를 이용해서 크기를 지정</font>
+      <br>
+      <font color = "blue">웹접근성 : 모든 사용자가 사용 가능하도록 하라 (청각/시각장애인을 위한 웹 작업)</font>
+      <br>
+      <font color = "orange">웹접근성 준수 방안을 따르면 됨... </font>
+   <hr>
+	   <font size = "1"><span>font size1</span></font><br>
+	   <font size = "2"><span>font size2</span></font><br>
+	   <font size = "3"><span>font size3</span></font><br>
+	   <font size = "4"><span>font size4</span></font><br>
+	   <font size = "5"><span>font size5</span></font><br>
+	   <font size = "6"><span>font size6</span></font><br>
+	   <font size = "7"><span>font size7</span></font><br>
+   <hr>
+     <h2>CSS 통한 글꼴 크기 지정</h2>
+   <hr>
+   <!-- 인라인 방식으로 CSS 지정 -->
+   <p style = "font-size : 25px;">CSS를 통해서 글꼴의 크기를 지정해 보겠습니다.</p>
+   <p style = "font-size : 15px;">CSS를 통해서 글꼴의 크기를 지정해 보겠습니다.</p>
+</body>
+</html>

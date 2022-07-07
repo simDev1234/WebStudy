@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+#calendar_title{
+	width : 100%;
+	text-align : center;
+	margin-bottom : 30px;
+}
+
+#calendar_title > .button{
+	display : inline-block;
+	width : 40px;
+	height : 40px;
+	border-radius : 4px;
+	background-color: white;
+  	color: black;
+ 	border: 2px solid #555555;
+}
+
+#calendar_title > .button:hover{
+	background-color: #555555;
+ 	color: white;
+}
+
+#calendar_title > h3{
+	display:inline-block;
+	width : 80%;
+}
+
+#calendar_title > h3 > em{
+	font-style: normal;
+}
+
+#monthTable{
+	border-collapse: collapse;
+ 	width: 100%;
+}
+
+#monthTable tr:nth-child(even){background-color: #f2f2f2;}
+
+#monthTable tr:hover {background-color: #ddd;}
+
+#monthTable tr > th{
+	width : 14.5%;
+	padding-top: 12px;
+ 	padding-bottom: 12px;
+    text-align: center;
+    background-color: #04AA6D;
+    border: 1px solid #ddd;
+    color: white;
+}
+
+#monthTable tr > td{
+	border: 1px solid #ddd;
+  	padding: 8px;
+}
+
+#dateInfo em{
+	display : inline-block;
+	font-weight : bold;
+	margin-bottom : 2px;
+}
+
+#dateInfo ul{
+	height : 80px;
+}

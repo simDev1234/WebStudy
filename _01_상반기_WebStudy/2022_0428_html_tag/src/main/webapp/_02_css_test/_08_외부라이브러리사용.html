@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- 부트스트랩3 라이브러리 연결 [CDN방식(Content Delivery Network) 콘텐츠를 네트워크를 통해 공급받음]--> 
+<!-- 부트스트랩 사이트 http://bootstrapk.com/ -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!-- web3 css -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<title>Insert title here</title>
+<style type="text/css">
+   #box{
+      width      : 500px;
+      min-height : 300px;
+      background : beige;
+      margin     : auto;
+      margin-top : 100px;
+   }
+   
+   table{  
+      width : 100%;
+      /* height는 부모로부터 상속받지 않음 (자식을 기준으로 100%)*/
+   }
+</style>
+</head>
+<body>
+   <div id = "box">
+   	  <div style = "margin-bottom : 10px; text-align : right;">
+   	     <input class = "btn btn-primary" type = "button" value = "글올리기">
+   	     <input class = "w3-circle w3-purple" type="button" value="+">
+   	  </div>
+   
+      <table class = "table table-striped">
+      <!-- title -->
+         <tr class = "success">
+           <th class = "no">번호</th>
+           <th class = "title">제목</th>
+           <th class = "name">작성자</th>
+           <th class = "date">작성일자</th>
+           <th class = "view">조회수</th>
+         </tr>
+         <!-- data -->
+         <tr>
+           <td>1</td>
+           <td>오늘은 월요일</td>
+           <td>홍길동</td>
+           <td>2022-05-02</td>
+           <td>150</td>
+         </tr>
+         <tr>
+           <td>2</td>
+           <td>오늘은 월요일</td>
+           <td>홍길동</td>
+           <td>2022-05-02</td>
+           <td>150</td>
+         </tr>
+         <tr>
+           <td>3</td>
+           <td>오늘은 월요일</td>
+           <td>홍길동</td>
+           <td>2022-05-02</td>
+           <td>150</td>
+         </tr>
+         <tr>
+           <td>4</td>
+           <td>오늘은 월요일</td>
+           <td>홍길동</td>
+           <td>2022-05-02</td>
+           <td>150</td>
+         </tr>
+         <tr>
+           <td>5</td>
+           <td>오늘은 월요일</td>
+           <td>홍길동</td>
+           <td>2022-05-02</td>
+           <td>150</td>
+         </tr>
+      </table>
+   </div>
+</body>
+</html>

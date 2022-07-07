@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/* class selector : .class_name */
+ul.submenu_type {
+	list-style : none;
+}
+
+ul.submenu_type > li {
+	margin-top : 30px;
+	/* border : 1px solid red; */
+}
+
+ul.submenu_type > li > a {
+	display : block;
+	width  : 120px;
+	border : 1px solid #8888ff;
+	text-decoration : none;
+	text-align      : center;
+	color           : #8888ff;
+}
+
+ul.submenu_type > li > a:hover{
+	border-color    : blue;
+	color           : blue;	
+}

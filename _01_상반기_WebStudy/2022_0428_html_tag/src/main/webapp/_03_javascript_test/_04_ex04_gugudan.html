@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+   * {margin : 0;}
+   
+   body{
+      margin-top : 12px;
+      margin-left: 16px;
+   }
+   
+   #dan{
+      margin-bottom : 5px; 
+   }
+   
+   #disp{
+      margin-top:5px;
+      width : 200px;
+      height : 250px;
+      background : black;
+      color : white; 
+      padding : 8px;
+   }
+</style>
+<script type="text/javascript">
+
+	var regular_number = /^[2-9]{1}$/;
+
+	function gugudan(){
+		//1. dan 값 가져오기
+		let dan_ctrl = document.getElementById("dan");
+		let dan = dan_ctrl.value;
+		
+		//2. 2~9사이 숫자인지 확인		
+		if (regular_number.test(dan) == false){
+			alert("2~9사이 숫자를 입력하세요.");
+			dan_ctrl.value = '';
+			dan_ctrl.focus();
+			return;
+		}
+		
+		//3. 구구단을 생성하기
+		let str = "[구구단 출력하기]<br>";
+		for (let i = 1; i <= 9; i++){
+			str = str + dan + "X" + i + "=" + dan*i + "<br>";
+		}
+		
+		//4. 출력하기
+		document.getElementById("disp").innerHTML= str;
+	}
+</script>
+</head>
+<body>
+단 : <input id = "dan">
+    <input type = "button" value = "구구단 출력" onclick = "gugudan();">
+<hr>
+<div id = "disp"></div>    
+</body>
+</html>

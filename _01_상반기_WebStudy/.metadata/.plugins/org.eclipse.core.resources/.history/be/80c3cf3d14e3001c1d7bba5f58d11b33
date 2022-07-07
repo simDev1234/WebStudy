@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+    //내장 객체 : session request out...
+    String session_id = session.getId();
+    out.print("JSP내 : "+session_id + "<br>");
+    
+    HttpSession session1 = request.getSession();
+    String session_id1 = session1.getId();
+    out.print("내가 : "+ session_id1 + "<br>");
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

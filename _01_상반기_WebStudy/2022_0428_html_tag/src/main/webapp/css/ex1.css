@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+div#disp{
+	width  : 200px;
+	height : 200px;
+	
+	/* box의 바깥쪽 여백 */
+	margin-top : 20px; 
+	
+	/* box의 안쪽 여백 */
+	/* [확인사항] 너비x높이 변화 : box 200x200 + 여백 20X20 ==> 전체 : 220x220 */
+	padding : 20px;
+	
+	border : 2px blue;
+	box-shadow : 1px 1px 3px black; 
+}

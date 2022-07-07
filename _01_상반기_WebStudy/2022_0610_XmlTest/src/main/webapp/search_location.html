@@ -1,0 +1,93 @@
+<!-- Kakao open API : 로컬 API 사용  -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+  #disp { width : 1200px; }
+</style>
+<script type="text/javascript">
+
+  var latitude = 0;
+  var longitude = 0;
+
+  $(document).ready(function(){
+	  
+	  //GeoLocation 통해 경도,위도 구하기
+	  if ('geolocation' in navigator){
+		  navigator.geolocation.getCurrentPosition(function(position){
+			  latitude = position.coords.latitude;
+			  longitude = position.coords.longitude;
+		  });
+	  }else{
+		  alert("현재 브라우저에서는 위치 정보를 얻을 수 없습니다. 다른 브라우저를 사용해주세요.");
+		  return;
+	  }
+	  
+  });
+
+  function search_local(){
+	  
+	  var search_name = $("#search_name").val().trim();
+	  
+	  if (search_name == ''){
+		  alert("검색할 키워드를 입력하세요!");
+		  $("#search_name").val('');
+		  $("#search_name").focus();
+		  return;
+	  }
+	  
+	  //결과 페이지 번호
+	  var page = $("#page").val();
+	  
+	  //현재 페이지의 첫번째 요소 번호
+	  var start = (page-1)*15 + 1;
+	  
+	  //Ajax로 요청
+	  $.ajax({
+		  url     : 'local/search.do', //LocationSearchAction
+		  data    : 
+		  {
+			  'search_name':search_name,
+			  'page':page,
+			  'start':start,
+			  'latitude':latitude,
+			  'longitude':longitude
+		  },
+		  success : function(res_data){
+			  $("#disp").html(res_data);
+		  },
+		  error   : function(err){
+			  alert(err.responseText);
+		  }
+	  });
+  }
+  
+</script>
+</head>
+<body>
+키워드 : <input id = "search_name">
+       <input type = "button" value = "검색" onclick = "search_local()">
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+페이지 : <select id = "page">
+           <option value = "1" selected>1</option>
+           <option value = "2">2</option>
+           <option value = "3">3</option>
+           <option value = "4">4</option>
+           <option value = "5">5</option>
+           <option value = "6">6</option>
+           <option value = "7">7</option>
+           <option value = "8">8</option>
+           <option value = "9">9</option>
+           <option value = "10">10</option>
+       </select>
+<hr>
+<div id = "disp"></div>
+</body>
+</html>

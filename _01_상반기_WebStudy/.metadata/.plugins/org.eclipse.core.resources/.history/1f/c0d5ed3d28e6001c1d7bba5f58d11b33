@@ -1,0 +1,9 @@
+-- 老访锅龋 包府按眉
+create sequence seq_photo_p_idx;
+
+-- table 积己
+create table member
+(
+   p_idx      int,  -- 老访锅龋
+   p_subject  varchar2(1000)  not null,
+);

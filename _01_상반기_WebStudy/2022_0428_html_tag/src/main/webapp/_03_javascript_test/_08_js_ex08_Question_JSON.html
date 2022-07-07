@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+    //JSON 배열
+    var p_array = [
+    	{"name":"일길동", "age":21, "addr":"서울시 마포구 서교동"},
+    	{"name":"일길동", "age":21, "addr":"서울시 마포구 노고산동"},
+    	{"name":"일길동", "age":21, "addr":"서울시 마포구 동교동"},
+    	{"name":"일길동", "age":21, "addr":"서울시 마포구 합정동"},
+    	{"name":"일길동", "age":21, "addr":"서울시 마포구 망원동"}
+    ];
+    
+    window.onload = function(){
+    	var html = "<table border = '1'>";
+    	
+    	html = html + "<tr><th>순번</th><th>이름</th><th>나이</th><th>주소</th></tr>"
+    	
+    	for (var i = 0; i < p_array.length; i++){
+    		html = html + "<tr><td>"+(i+1)+"</td>";
+    		html = html + "<td>"+p_array[i].name+"</td>";
+    		html = html + "<td>"+p_array[i].age+"</td>";
+    		html = html + "<td>"+p_array[i].addr+"</td>";
+    		html = html + "</tr>";
+    	}
+    	
+    	html = html + "</table>"
+    	
+    	document.getElementById("disp").innerHTML = html;
+    	
+    };
+</script>
+</head>
+<body>
+   <div id = "disp"></div>
+</body>
+</html>

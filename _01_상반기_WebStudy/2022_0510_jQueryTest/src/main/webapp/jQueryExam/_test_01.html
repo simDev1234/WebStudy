@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- jQuery사용 설정 -->
+<!-- off-line참조 -->
+<script src="js/jquery-1.10.2.js"></script>
+<!-- on-line참조 -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+<script type="text/javascript">
+
+/* 함수생성방법 */
+
+//1.선언적방식
+function myfunc1(){}
+function init(){ alert('Elment 배치 완료'); }
+
+//2.리터럴방식
+var myfunc2 = function(){}
+var init2   = function(){ alert('리터럴:Elment 배치 완료'); }
+
+//3.익명함수
+//function(){}
+
+//상수화 리터럴
+// 상수 : PI
+// 리터럴 : 3.14
+const PI = 3.14;
+
+/* javascript 초기화 방법 */
+window.onload=function(){ 
+    console.log('4.Javascript 익명함수:Elment 배치 완료');
+}
+
+/* jQuery 초기화 */
+//jQuery(selector).event(처리함수);
+// --파싱완료되면
+//1) document가 준비되면, ready()를 호출하겠다.
+jQuery(document).ready(); 
+//2) sandwitch 코드 방식으로 중간에 넣는다.
+jQuery(document).ready(function(){  //익명함수
+	
+});
+
+jQuery(document).ready(function(){
+	console.log('1.jQuery(docuemnt).ready :Elment 배치 완료');
+});
+
+/* jQuery =>  $ 기호사용 */
+
+//1) document가 준비되면, ready()를 호출하겠다.
+$(document).ready(); 
+//2) sandwitch 코드 방식으로 중간에 넣는다.
+$(document).ready(function(){  //익명함수
+	
+});
+
+$(document).ready(function(){
+	console.log('2.$(docuemnt).ready :Elment 배치 완료');
+});
+
+
+/* 초기화 처리에만 해당 : selector / event생략 */
+
+//1) document가 준비되면, ready()를 호출하겠다.
+$();  //(document).ready 축약
+//2) sandwitch 코드 방식으로 중간에 넣는다.
+$(function(){  //익명함수
+	
+});
+
+$(function(){
+	console.log('3.$(처리함수) :Elment 배치 완료');
+});
+
+</script>
+</head>
+<body>
+  
+</body> 
+</html>

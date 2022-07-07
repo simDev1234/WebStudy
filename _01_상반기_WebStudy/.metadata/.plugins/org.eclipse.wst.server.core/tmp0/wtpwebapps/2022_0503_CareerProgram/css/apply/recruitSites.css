@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+#insertRecruitBox{
+	margin-top:20px;
+}
+
+#insertRecruitTable{
+	border-top : 1px solid #ddd;
+	box-sizing : border-box;
+}
+
+#insertRecruitTable th{
+	width : 150px;
+	height : 40px;
+	border-right : 1px solid #ddd;
+	box-sizing : border-box;
+}
+
+#insertRecruitTable td{
+	padding-left : 20px;
+	box-sizing : border-box;
+	height : 40px;
+}
+
+#insertRecruitTable td input[type="text"]{
+	width:80%;
+}
+
+#insertRecruitTable td input[type="date"]{
+	margin-right : 10px;
+}
+
+#insertRecruitTable label{
+	margin-right : 10px;
+}
+
+#insertRecruitTable .recruitDesc{
+	font-weight : 400;
+	font-size : 13px;
+}
+
+#insertRecruitTable .w3-button{
+	width : 150px;
+	margin-right : 10px;
+}
+
+#insertRecruitTable .leftLine{
+	padding-left : 20px;
+	border-left : 1px solid #ddd;
+	box-sizing : border-box;
+}
+
+#insertRecruitTable .w3-container{
+	padding : 0;
+}
+
+.recruitButtons{
+	margin-top : 15px;
+	text-align : right;
+}
+
+.recruitButtons button{
+	width : 80px;
+	margin-right : 5px;
+}
+
+.recView_box{
+	width : 100%;
+	height : auto;
+	margin-top : 20px;
+}
+
+#recListBox{
+	display : none;
+}

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;DBBase&apos; to &apos;2022_0607_DBBase&apos;" description="Rename resource &apos;DBBase&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/DBBase" name="2022_0607_DBBase" stamp="1654581115287" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;2022_0607_DBBase&apos; to &apos;2022_0607_PhotoGallery&apos;" description="Rename resource &apos;2022_0607_DBBase&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/2022_0607_DBBase" name="2022_0607_PhotoGallery" stamp="1654581920214" updateReferences="true"/>
+</session>

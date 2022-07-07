@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- jQuery Library 선언 -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script> 	
+<script type="text/javascript">
+   //숫자 정규식
+   var regular_number = /^[0-9]{1,}$/;
+
+   function calc(op){
+	   var su1 = $("#su1").val();
+	   var su2 = $("#su2").val();
+	   
+	   //su1의 숫자 확인
+	   if (regular_number.test(su1)==false){
+		   alert("숫자만 입력하세요.");
+		   $("#su1").val("");
+		   $("$su1").focus();
+		   return;
+	   }
+	   
+	   //su2의 숫자 확인
+	   if (regular_number.test(su2)==false){
+		   alert("숫자만 입력하세요.");
+		   $("#su2").val("");
+		   $("#su2").focus();
+		   return;
+	   }
+	   
+	   //jquery Ajax : JSON코드로 작성
+	   //        key : value...........key    : value
+	   //$.ajax({url : '', data : '', success : function(result_data){}});
+	   $.ajax({
+		         type : 'GET', 
+		         url  : 'calc.do', 
+		         /* 전달인자 : {JSON형식}  --->  parameter로 넘어간다. */ 
+		         data : {'su1' : su1, 'su2' : su2, 'op' : op},
+		         /* 서버에서 처리/응답 잘 된 경우 
+		                            수신된 data*/
+		         success : function(result_data){
+		        	 $("#result").val(result_data);
+		         },
+		         /* 서버에서 처리/응답 안 된 경우 */
+		         error   : function(err){
+		        	 alert(err.responseText);
+		         }
+	   });
+	   
+   }
+   
+</script>
+</head>
+<body>
+수1 : <input id = "su1"><br>
+수2 : <input id = "su2"><br>
+<input type = "button" value = "계산해줘(+)" onclick = "calc('+');">
+<input type = "button" value = "계산해줘(-)" onclick = "calc('-');">
+<input type = "button" value = "계산해줘(*)" onclick = "calc('*');">
+<input type = "button" value = "계산해줘(/)" onclick = "calc('/');"><br>
+결과 : <input id = "result">
+</body>
+</html>

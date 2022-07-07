@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+/* 모든 요소 */
+*{ magin : 0 }
+
+ul#main_menu{
+	list-style : none;
+}
+
+/* 하위(자식) 요소 지정하는 selector 
+   - 부모 > 자식 : 바로 밑의 하위 요소만 포함된다.
+   - 부모   자식 : 모든 하위 요소가 다 포함된다. 
+*/
+ul#main_menu > li{
+	display : inline-block; /* 한 줄에 표현하고자 inline-block으로 바꿈 */
+	/* border  : 1px solid red; */
+	margin-right : 30px;
+}
+
+ul#main_menu > li > a{
+	display : block; /* 크기 지정하고자 block으로 바꿈 */
+	width : 100px;
+	border : 1px solid orange;
+	text-align : center;
+	text-decoration : none; /* 밑줄 지우기 */
+	font-size : 14px;
+	font-weight : bold;
+	color  : #6666cc;
+}
+
+/* a tag에 마우스가 올라가면 */
+ul#main_menu > li > a:hover{
+	border : 1px solid red;
+	color  : blue;
+}

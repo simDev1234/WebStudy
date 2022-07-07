@@ -1,0 +1,158 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import service.DBService;
+import vo.MemberVo;
+
+public class MemberDao {
+	
+	static MemberDao single = null;
+
+	public static MemberDao getInstance() {
+		if (single == null)
+			single = new MemberDao();
+		return single;
+	}
+
+	//외부에서 생성하지 말것
+	private MemberDao() {
+
+	}
+	
+	//전체조회
+	public List<MemberVo> selectList() {
+
+		List<MemberVo> list = new ArrayList<MemberVo>();
+
+		Connection conn = null; //null을 일부로 초기값으로 설정
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql = "select * from member2 order by m_idx";
+
+		try {
+
+			//1. Connection 얻어오기
+			conn = DBService.getInstance().getConnection();
+
+			//2. PreparedStatment 얻어오기
+			pstmt = conn.prepareStatement(sql);
+
+			//3. ResultSet 얻어오기
+			rs = pstmt.executeQuery();
+
+			//4. 포장 (record -> Vo -> list)
+			while (rs.next()) {
+
+				//rs가 가리키는 레코드(행)의 값을 읽어오기
+
+				//Vo로 포장
+				MemberVo vo = new MemberVo();
+				
+				vo.setM_idx(rs.getInt("m_idx"));
+				vo.setM_name(rs.getString("m_name"));
+				vo.setM_id(rs.getString("m_id"));
+				vo.setM_pwd(rs.getString("m_pwd"));
+				vo.setM_zipcode(rs.getString("m_zipcode"));
+				vo.setM_addr(rs.getString("m_addr"));
+				vo.setM_grade(rs.getString("m_grade"));
+				vo.setM_ip(rs.getString("m_ip"));
+				vo.setM_regdate(rs.getString("m_regdate"));	
+
+				//list에 추가
+				list.add(vo);
+
+			}
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+
+		} finally {
+
+			try {
+				//연결(생성)되어 있을 시, close  --why? 다음 명령 위해 연결 해제
+				if (rs != null)
+					rs.close();
+
+				if (pstmt != null)
+					pstmt.close();
+
+				if (conn != null)
+					conn.close();
+
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+
+		return list;
+
+	}
+	
+	//idx에 해당되는 객체 1건 구하기
+	public MemberVo selectOne(int m_idx) {
+
+		MemberVo vo = null;
+		Connection conn = null; //null을 일부로 초기값으로 설정
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql = "select * from member2 where m_idx = ?";
+
+		try {
+
+			//1. Connection 얻어오기
+			conn = DBService.getInstance().getConnection();
+
+			//2. PreparedStatment 얻어오기
+			pstmt = conn.prepareStatement(sql);
+
+			//3. pstmt 세팅
+			pstmt.setInt(1, m_idx);
+
+			//4. ResultSet 얻어오기
+			rs = pstmt.executeQuery();
+
+			//5. 포장 (record -> Vo)
+			if (rs.next()) {
+
+				//Vo로 포장
+				vo = new MemberVo();
+
+			}
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+
+		} finally {
+
+			try {
+				//연결(생성)되어 있을 시, close  --why? 다음 명령 위해 연결 해제
+				if (rs != null)
+					rs.close();
+
+				if (pstmt != null)
+					pstmt.close();
+
+				if (conn != null)
+					conn.close();
+
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+
+		return vo;
+
+	}
+	
+}

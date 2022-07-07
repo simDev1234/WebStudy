@@ -1,0 +1,232 @@
+
+5월 16, 2022 12:23:06.225 NEW SESSION
+5월 16, 2022 12:23:06.225 [17704:5980:0516/122306.220:ERROR:device_event_log_impl.cc(214)] [12:23:06.220] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 16, 2022 12:23:07.107 [17704:13744:0516/122307.107:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 16, 2022 12:23:32.270 [17704:13744:0516/122332.268:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 16, 2022 12:23:55.659 [17704:5980:0516/122355.658:ERROR:account_info_fetcher.cc(62)] OnGetTokenFailure: Connection failed (-106).
+5월 16, 2022 12:23:59.314 [17704:15752:0516/122359.312:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 16, 2022 12:24:24.675 [17704:13744:0516/122424.673:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 16, 2022 12:29:55.951 [16916:18648:0516/122955.947:ERROR:device_event_log_impl.cc(214)] [12:29:55.948] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 16, 2022 12:29:59.223 [16916:2604:0516/122959.222:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 16, 2022 12:30:26.400 [16916:2604:0516/123026.399:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 16, 2022 12:30:51.210 [16916:10924:0516/123051.209:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 16, 2022 12:31:15.91 [16916:2604:0516/123115.091:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 16, 2022 12:43:13.471 [17888:10920:0516/124313.470:ERROR:device_event_log_impl.cc(214)] [12:43:13.470] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 16, 2022 12:43:13.520 [17888:2568:0516/124313.519:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 16, 2022 12:43:34.498 [17888:2568:0516/124334.496:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 16, 2022 12:44:10.147 [17888:11580:0516/124410.147:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 16, 2022 12:44:27.590 [17888:2568:0516/124427.589:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 16, 2022 12:45:57.653 [17888:2568:0516/124557.651:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 16, 2022 12:49:09.265 [17888:2568:0516/124909.263:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 16, 2022 12:56:41.35 [17888:2568:0516/125641.034:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 16, 2022 13:06:41.39 [17888:2568:0516/130641.038:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 16, 2022 14:00:29.471 [17888:2568:0516/140029.471:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 16, 2022 14:10:29.482 [17888:2568:0516/141029.475:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 16, 2022 14:19:59.436 [17888:2568:0516/141959.424:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+5월 16, 2022 14:20:03.528 [17888:2568:0516/142003.526:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+
+5월 17, 2022 12:40:29.380 NEW SESSION
+5월 17, 2022 12:40:29.382 [16140:21008:0517/124029.343:ERROR:device_event_log_impl.cc(214)] [12:40:29.343] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 17, 2022 12:40:46.537 [16140:21008:0517/124046.536:ERROR:interface_endpoint_client.cc(665)] Message 5 rejected by interface blink.mojom.WidgetHost
+5월 17, 2022 12:41:23.999 [16140:17560:0517/124123.997:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 17, 2022 13:29:35.696 [16140:21008:0517/132935.689:ERROR:device_event_log_impl.cc(214)] [13:29:35.688] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+
+5월 19, 2022 10:10:23.64 NEW SESSION
+5월 19, 2022 10:10:23.64 [16464:15668:0519/101023.060:ERROR:device_event_log_impl.cc(214)] [10:10:23.060] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 19, 2022 10:11:19.36 [16464:13500:0519/101119.035:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 19, 2022 15:11:18.743 [16464:10248:0519/151118.739:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 19, 2022 21:28:13.571 [16464:16980:0519/212813.197:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 19, 2022 21:28:14.140 [16464:14824:0519/212813.307:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 19, 2022 21:28:29.803 [16464:17632:0519/212829.609:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 20, 2022 09:24:15.200 [16464:16980:0520/092415.165:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 20, 2022 09:24:15.288 [16464:11288:0520/092415.190:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 20, 2022 09:24:19.57 [16464:2060:0520/092418.938:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 20, 2022 14:24:11.532 [16464:6272:0520/142411.517:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 20, 2022 19:24:11.587 [16464:17648:0520/192411.576:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 21, 2022 13:32:58.719 [16464:16980:0521/133258.536:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+5월 21, 2022 13:32:58.939 [16464:19808:0521/133258.556:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 21, 2022 13:33:06.523 [16464:19020:0521/133306.429:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 21, 2022 13:33:20.250 [16464:16980:0521/133320.246:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 13:33:32.855 [16464:15668:0521/133332.845:ERROR:account_info_fetcher.cc(62)] OnGetTokenFailure: Connection failed (-106).
+5월 21, 2022 13:34:05.52 [16464:16980:0521/133405.049:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 13:35:36.51 [16464:15272:0521/133536.048:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 21, 2022 13:35:42.865 [16464:16980:0521/133542.864:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 13:36:51.84 [16464:11868:0521/133651.073:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 21, 2022 13:39:23.538 [16464:16980:0521/133923.535:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 13:39:50.433 [16464:16980:0521/133950.425:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 13:40:50.290 [16464:16980:0521/134050.285:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 13:42:30.481 [16464:16980:0521/134230.478:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 13:45:55.166 [16464:16980:0521/134555.158:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 13:55:09.68 [16464:16980:0521/135509.066:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 13:56:06.195 [16464:16980:0521/135606.191:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -118
+5월 21, 2022 14:06:27.353 [16464:16980:0521/140627.343:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -118
+5월 21, 2022 14:16:48.488 [16464:16980:0521/141648.478:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -118
+5월 21, 2022 14:20:41.896 [16464:16980:0521/142041.889:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 15:52:02.351 [16464:16980:0521/155202.309:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 15:52:32.278 [16464:16980:0521/155232.270:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 15:53:27.79 [16464:16980:0521/155327.073:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 15:53:58.306 [16464:16980:0521/155358.304:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+5월 21, 2022 16:51:22.250 [16464:16980:0521/165122.218:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 16:51:43.109 [16464:16980:0521/165143.107:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 16:52:25.964 [16464:16980:0521/165225.957:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 16:54:22.803 [16464:16980:0521/165422.795:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 16:57:16.587 [16464:16980:0521/165716.579:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 17:03:09.967 [16464:16980:0521/170309.959:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 17:13:09.977 [16464:16980:0521/171309.969:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 17:23:09.981 [16464:16980:0521/172309.972:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 17:30:34.233 [16464:16980:0521/173034.230:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+5월 21, 2022 17:30:39.390 [16464:16980:0521/173039.389:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 20:21:17.52 [16464:16980:0521/202117.041:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 20:21:28.08 [16464:17156:0521/202127.960:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 21, 2022 20:21:44.811 [16464:16980:0521/202144.810:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 20:22:38.285 [16464:16980:0521/202238.282:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 21, 2022 20:24:09.397 [16464:15668:0521/202409.381:ERROR:device_event_log_impl.cc(214)] [20:24:09.381] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+5월 22, 2022 08:43:12.244 [16464:20292:0522/084312.121:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 22, 2022 08:43:25.319 [16464:14144:0522/084325.303:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 22, 2022 13:33:48.562 [16464:7256:0522/133348.504:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 22, 2022 13:33:48.758 [16464:16980:0522/133348.605:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 22, 2022 13:34:11.572 [16464:16980:0522/133411.566:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 22, 2022 13:34:22.232 [16464:15668:0522/133422.228:ERROR:account_info_fetcher.cc(62)] OnGetTokenFailure: Connection failed (-106).
+5월 22, 2022 13:34:57.34 [16464:16980:0522/133457.032:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 22, 2022 13:36:26.52 [16464:15264:0522/133626.050:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 22, 2022 13:36:39.802 [16464:16980:0522/133639.794:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 22, 2022 13:37:41.57 [16464:15264:0522/133741.055:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 22, 2022 13:39:40.525 [16464:16980:0522/133940.518:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 22, 2022 13:40:48.561 [16464:13340:0522/134048.559:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 22, 2022 13:43:11.931 [16464:19156:0522/134311.928:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 22, 2022 13:45:29.843 [16464:16668:0522/134529.822:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 22, 2022 13:47:00.184 [16464:16980:0522/134700.183:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 22, 2022 13:48:35.475 [16464:16668:0522/134835.474:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 22, 2022 13:48:57.530 [16464:16980:0522/134857.530:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -7
+5월 22, 2022 13:49:08.165 [16464:14924:0522/134908.164:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 22, 2022 13:53:02.166 [16464:20828:0522/135302.163:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 22, 2022 14:59:36.193 [16464:16980:0522/145936.185:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 22, 2022 14:59:57.237 [16464:16980:0522/145957.228:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 22, 2022 15:00:41.890 [16464:16980:0522/150041.887:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 22, 2022 15:02:17.567 [16464:16980:0522/150217.556:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 22, 2022 15:06:01.17 [16464:16980:0522/150601.010:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 23, 2022 09:15:52.318 [16464:16980:0523/091552.314:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+5월 23, 2022 09:15:53.985 [16464:20828:0523/091553.978:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 23, 2022 09:16:10.35 [16464:15952:0523/091610.034:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 23, 2022 14:15:49.702 [16464:6060:0523/141549.659:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 23, 2022 17:42:03.136 [16464:15668:0523/174203.123:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 17:46:54.568 [16464:15668:0523/174654.566:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 17:47:00.102 [16464:15668:0523/174700.100:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 17:47:04.318 [16464:15668:0523/174704.317:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 17:47:11.271 [16464:15668:0523/174711.270:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 17:47:15.828 [16464:15668:0523/174715.827:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 17:47:20.493 [16464:15668:0523/174720.492:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 17:47:24.450 [16464:15668:0523/174724.449:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 17:48:56.63 [16464:15668:0523/174856.063:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 18:05:59.861 [16464:15668:0523/180559.852:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 20:00:39.426 [16464:16980:0523/200039.404:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 23, 2022 20:00:54.95 [16464:12860:0523/200054.094:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 23, 2022 20:02:23.101 [16464:15668:0523/200223.090:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 20:02:35.789 [16464:15668:0523/200235.784:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 20:02:40.144 [16464:15668:0523/200240.143:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 20:02:47.100 [16464:15668:0523/200247.098:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 20:02:54.606 [16464:15668:0523/200254.605:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 20:02:59.11 [16464:15668:0523/200259.005:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 20:03:02.814 [16464:15668:0523/200302.810:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 24, 2022 08:38:35.834 [16464:16980:0524/083835.804:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 24, 2022 08:38:37.179 [16464:20128:0524/083837.174:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 24, 2022 08:38:37.999 [16464:20368:0524/083837.998:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 08:38:53.447 [16464:16980:0524/083853.445:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+5월 24, 2022 09:34:03.731 [16464:16980:0524/093403.717:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 24, 2022 09:34:13.164 [16464:15668:0524/093413.156:ERROR:device_event_log_impl.cc(214)] [09:34:13.155] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+5월 24, 2022 09:34:20.610 [16464:16980:0524/093420.587:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+5월 24, 2022 09:34:23.528 [16464:16980:0524/093423.527:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+5월 24, 2022 10:00:30.496 [16464:15668:0524/100030.492:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 24, 2022 11:16:16.822 [16464:15668:0524/111616.816:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 24, 2022 11:16:26.887 [16464:15668:0524/111626.887:ERROR:interface_endpoint_client.cc(665)] Message 3 rejected by interface blink.mojom.Widget
+5월 24, 2022 13:38:26.735 [16464:19776:0524/133826.713:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 14:50:46.958 [16464:15668:0524/145046.951:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 24, 2022 16:49:03.792 [2872:17196:0524/164903.786:ERROR:device_event_log_impl.cc(214)] [16:49:03.786] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 24, 2022 16:49:58.912 [2872:19108:0524/164958.911:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 25, 2022 09:33:13.882 [2872:14592:0525/093313.754:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 25, 2022 09:33:15.526 [2872:20956:0525/093313.762:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 25, 2022 09:33:33.767 [2872:2868:0525/093333.198:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 25, 2022 14:33:07.896 [2872:19124:0525/143307.860:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+5월 30, 2022 09:41:09.469 NEW SESSION
+5월 30, 2022 09:41:09.470 [19904:18336:0530/094109.452:ERROR:device_event_log_impl.cc(214)] [09:41:09.451] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 30, 2022 09:42:04.701 [19904:18496:0530/094204.700:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 30, 2022 10:07:04.407 [19904:18336:0530/100704.402:ERROR:interface_endpoint_client.cc(665)] Message 5 rejected by interface blink.mojom.WidgetHost
+5월 30, 2022 12:11:09.147 [19904:18336:0530/121109.128:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 30, 2022 13:11:37.616 [19904:15868:0530/131137.608:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+5월 30, 2022 13:11:37.639 [19904:15868:0530/131137.609:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+5월 30, 2022 13:12:11.574 [19904:15868:0530/131211.571:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+5월 30, 2022 13:12:11.578 [19904:15868:0530/131211.572:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+5월 30, 2022 13:13:09.968 [19904:15868:0530/131309.967:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+5월 30, 2022 13:13:09.970 [19904:15868:0530/131309.968:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+5월 30, 2022 14:42:04.703 [19904:20204:0530/144204.688:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 30, 2022 18:33:01.279 [19904:15868:0530/183300.976:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 30, 2022 18:33:23.526 [19904:15868:0530/183323.524:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 30, 2022 18:34:11.665 [19904:15868:0530/183411.663:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 30, 2022 18:35:57.565 [19904:15868:0530/183557.563:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 30, 2022 18:39:09.33 [19904:15868:0530/183909.031:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 30, 2022 18:42:11.771 [19904:15868:0530/184211.771:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+5월 30, 2022 19:42:02.834 [19904:20620:0530/194202.826:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 31, 2022 09:13:19.953 [19904:15868:0531/091319.890:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 31, 2022 09:13:20.282 [19904:19500:0531/091319.944:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 31, 2022 09:13:23.891 [19904:21992:0531/091323.740:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 31, 2022 09:13:42.385 [19904:15868:0531/091342.383:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 31, 2022 09:14:04.980 [19904:19500:0531/091404.977:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 31, 2022 09:14:26.733 [19904:15868:0531/091426.731:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 31, 2022 09:15:57.490 [19904:4800:0531/091557.487:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 31, 2022 09:16:14.436 [19904:15868:0531/091614.435:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 31, 2022 09:18:46.246 [19904:19500:0531/091846.245:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+5월 31, 2022 09:19:59.427 [19904:15868:0531/091959.426:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 31, 2022 14:13:16.634 [19904:14040:0531/141316.579:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 31, 2022 19:58:52.862 [19904:15868:0531/195852.666:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 31, 2022 19:59:00.950 [19904:10492:0531/195900.737:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 31, 2022 19:59:19.551 [19904:15868:0531/195919.549:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 31, 2022 20:00:09.185 [19904:15868:0531/200009.182:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 31, 2022 20:01:33.210 [19904:15868:0531/200133.203:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+5월 31, 2022 20:05:22.905 [19904:15868:0531/200522.897:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+6월 02, 2022 09:27:44.864 [19904:15868:0602/092744.733:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+6월 02, 2022 09:27:45.877 [19904:13608:0602/092744.754:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+6월 02, 2022 09:27:55.222 [19904:15004:0602/092752.259:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 02, 2022 09:28:05.26 [19904:15868:0602/092805.024:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+6월 02, 2022 09:28:17.908 [19904:18336:0602/092817.891:ERROR:account_info_fetcher.cc(62)] OnGetTokenFailure: Connection failed (-106).
+6월 02, 2022 09:28:55.641 [19904:15868:0602/092855.640:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+6월 02, 2022 14:27:41.359 [19904:3148:0602/142741.317:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 02, 2022 20:41:50.499 [19904:15868:0602/204150.450:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+6월 02, 2022 20:42:09.484 [19904:17780:0602/204209.339:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 03, 2022 09:29:29.440 [19904:15868:0603/092929.394:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+6월 03, 2022 09:29:29.713 [19904:15868:0603/092929.709:ERROR:registration_request.cc(247)] Registration URL fetching failed.
+6월 03, 2022 09:29:29.714 [19904:15868:0603/092929.710:ERROR:registration_request.cc(247)] Registration URL fetching failed.
+6월 03, 2022 09:29:30.138 [19904:600:0603/092930.136:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+6월 03, 2022 09:29:33.983 [19904:15868:0603/092933.978:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+6월 03, 2022 09:29:35.41 [19904:23332:0603/092935.040:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 03, 2022 09:29:55.721 [19904:15868:0603/092955.719:ERROR:registration_request.cc(247)] Registration URL fetching failed.
+6월 03, 2022 09:29:57.668 [19904:15868:0603/092957.666:ERROR:registration_request.cc(247)] Registration URL fetching failed.
+6월 03, 2022 09:30:09.904 [19904:18336:0603/093009.903:ERROR:account_info_fetcher.cc(62)] OnGetTokenFailure: Connection failed (-106).
+6월 03, 2022 09:30:26.455 [19904:15868:0603/093026.454:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+6월 03, 2022 09:30:38.939 [19904:15868:0603/093038.938:ERROR:registration_request.cc(247)] Registration URL fetching failed.
+6월 03, 2022 09:30:43.334 [19904:15868:0603/093043.315:ERROR:registration_request.cc(247)] Registration URL fetching failed.
+6월 03, 2022 09:32:19.436 [19904:15868:0603/093219.428:ERROR:registration_request.cc(247)] Registration URL fetching failed.
+6월 03, 2022 09:32:20.605 [19904:15868:0603/093220.601:ERROR:registration_request.cc(247)] Registration URL fetching failed.
+6월 03, 2022 09:32:25.946 [19904:15868:0603/093225.945:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+6월 03, 2022 09:32:37.661 [19904:22688:0603/093237.657:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+6월 03, 2022 09:33:52.669 [19904:3688:0603/093352.661:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+6월 03, 2022 09:34:28.646 [19904:15868:0603/093428.641:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+6월 03, 2022 10:50:20.538 [19904:18336:0603/105020.531:ERROR:interface_endpoint_client.cc(665)] Message 5 rejected by interface blink.mojom.WidgetHost
+6월 03, 2022 11:38:17.338 [19904:18336:0603/113817.321:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+6월 03, 2022 12:04:03.63 [19904:18336:0603/120403.057:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+6월 03, 2022 12:04:03.79 [19904:18336:0603/120403.057:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+6월 03, 2022 12:05:34.774 [19904:18336:0603/120534.773:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+6월 03, 2022 12:05:34.781 [19904:18336:0603/120534.773:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+6월 03, 2022 14:26:14.740 [19904:15868:0603/142614.656:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+6월 03, 2022 14:29:25.70 [19904:19416:0603/142925.066:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 07, 2022 09:28:55.920 [19904:15868:0607/092854.773:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+6월 07, 2022 09:29:10.381 [19904:18760:0607/092859.773:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+6월 07, 2022 09:29:10.382 [19904:18916:0607/092903.470:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 07, 2022 12:31:14.236 [19904:18336:0607/123114.185:ERROR:interface_endpoint_client.cc(665)] Message 5 rejected by interface blink.mojom.WidgetHost
+6월 07, 2022 14:28:46.67 [19904:1084:0607/142846.059:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 07, 2022 14:43:14.583 [19904:18336:0607/144314.580:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+6월 07, 2022 16:20:24.664 [19904:18336:0607/162024.615:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+6월 07, 2022 16:24:31.445 [19904:18336:0607/162431.443:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+6월 07, 2022 19:28:40.33 [19904:9568:0607/192839.972:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 08, 2022 09:34:14.76 [19904:8592:0608/093413.853:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 08, 2022 14:33:38.89 [19904:1176:0608/143338.061:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater

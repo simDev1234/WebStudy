@@ -1,0 +1,38 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+    //Cookie 정보 읽어온다.
+    Cookie[] cookie_array = request.getCookies();
+
+    if(cookie_array != null){
+    	
+    	for(Cookie c : cookie_array){
+    		String name  = c.getName();
+    		String value = c.getValue();
+    		System.out.printf("[%s]:[%s]",name,value);
+    	}
+    	
+    }
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+   #disp{
+      position : absolute;
+      top      : 30px;
+      right    : 50px;
+      width    : 200px;
+      height   : 200px;
+      padding  : 30px;
+      background : #333333;
+      color    : yellow;
+   }
+</style>
+</head>
+<body>
+   <div id = "disp"></div>
+</body>
+</html>

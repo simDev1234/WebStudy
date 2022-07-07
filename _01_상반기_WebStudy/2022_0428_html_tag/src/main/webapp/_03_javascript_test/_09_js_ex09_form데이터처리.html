@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	//[방법1] document내 form Element를 배열로 구하기
+    function send1(){
+    	
+    	//현재 문서(Document) 내 존재하는 form 정보를 구하는 객체
+    	//- forms : 문서 내 form 정보를 배열로 저장
+    	var f = document.forms[0];
+    	
+    	var id  = f.id.value.trim();  // id값 얻어오기 + 공백제거
+    	var pwd = f.pwd.value.trim(); //pwd값 얻어오기 + 공백제거
+    	
+    	if (id == ''){
+    		alert('아이디를 입력하세요.');
+    		f.id.value = '';
+    		f.id.focus();
+    		return;
+    	}
+    	
+    	if (pwd == ''){
+    		alert('비밀번호를 입력하세요.');
+    		f.pwd.value = '';
+    		f.pwd.focus();
+    		return;
+    	}
+    	
+    	f.action = "";    //전송 대상(where) : 생략되면 자신의 페이지를 호출
+    	
+    	f.method = "GET"; //전송 방식(how)   : get/post
+    	
+    	f.submit(); //전송 함수 *주의사항 : f.submit; --- 전송X
+    	            //                 ㄴ 에러가 나타나지 않음
+    	
+    }
+    
+    //[방법2] html내 form에 name을 부여
+	function send2(){
+    	
+    	//<form name = "ff"> 폼 이름이 부여된 상태
+    	var f = document.ff; //name의 경우는 .name으로 가져온다.
+    	
+    	var id  = f.id.value.trim();  // id값 얻어오기 + 공백제거
+    	var pwd = f.pwd.value.trim(); //pwd값 얻어오기 + 공백제거
+    	
+    	if (id == ''){
+    		alert('아이디를 입력하세요.');
+    		f.id.value = '';
+    		f.id.focus();
+    		return;
+    	}
+    	
+    	if (pwd == ''){
+    		alert('비밀번호를 입력하세요.');
+    		f.pwd.value = '';
+    		f.pwd.focus();
+    		return;
+    	}
+    	
+    	f.action = "you2.do";    //전송 대상(where) : 생략되면 자신의 페이지를 호출
+    	
+    	f.method = "GET"; //전송 방식(how)   : get/post
+    	
+    	f.submit(); //전송 함수 *주의사항 : f.submit; --- 전송X
+    	            //                 ㄴ 에러가 나타나지 않음
+    	
+    }
+    
+    //--- 위의 두 가지 방법의 경우, 
+    //    (1) 배열  >> 위치 정보 확인해야함
+    //    (2) name >> 이름을 알고 있어야함
+    //    --> 현실적으로 작업 시 어려움
+    
+	//[방법3] 자바스크립트는 함수의 인자 선언시 변수명만 기록 -- 가장 많이 사용하는 방법
+	function send3(f){ // f = this.form
+    	
+    	var id  = f.id.value.trim();  // id값 얻어오기 + 공백제거
+    	var pwd = f.pwd.value.trim(); //pwd값 얻어오기 + 공백제거
+    	
+    	if (id == ''){
+    		alert('아이디를 입력하세요.');
+    		f.id.value = '';
+    		f.id.focus();
+    		return;
+    	}
+    	
+    	if (pwd == ''){
+    		alert('비밀번호를 입력하세요.');
+    		f.pwd.value = '';
+    		f.pwd.focus();
+    		return;
+    	}
+    	
+    	f.action = "you3.do";    //전송 대상(where) : 생략되면 자신의 페이지를 호출
+    	
+    	f.method = "GET"; //전송 방식(how)   : get/post
+    	
+    	f.submit(); //전송 함수 *주의사항 : f.submit; --- 전송X
+    	            //                 ㄴ 에러가 나타나지 않음
+    	
+    }
+    
+    /* ---------------button 태그를 사용------------------ */
+    
+	function send4(f){ // f = this.form
+    	
+    	var id  = f.id.value.trim();  // id값 얻어오기 + 공백제거
+    	var pwd = f.pwd.value.trim(); //pwd값 얻어오기 + 공백제거
+    	
+    	if (id == ''){
+    		alert('아이디를 입력하세요.');
+    		f.id.value = '';
+    		f.id.focus();
+    		return;
+    	}
+    	
+    	if (pwd == ''){
+    		alert('비밀번호를 입력하세요.');
+    		f.pwd.value = '';
+    		f.pwd.focus();
+    		return;
+    	}
+    	
+    	f.action = "you3.do";    //전송 대상(where) : 생략되면 자신의 페이지를 호출
+    	
+    	f.method = "GET"; //전송 방식(how)   : get/post
+    	
+    	/* 버튼의 경우, onsubmit() 자동실행 */
+    	/* >> html 내에서 먼저 return false했는지 확인 해야 */
+    	f.submit();
+    	
+    }
+    
+	/* ---------------image 태그를 사용------------------ */
+    
+	function send5(f){ // f = this.form
+    	
+    	var id  = f.id.value.trim();  // id값 얻어오기 + 공백제거
+    	var pwd = f.pwd.value.trim(); //pwd값 얻어오기 + 공백제거
+    	
+    	if (id == ''){
+    		alert('아이디를 입력하세요.');
+    		f.id.value = '';
+    		f.id.focus();
+    		return false;
+    	}
+    	
+    	if (pwd == ''){
+    		alert('비밀번호를 입력하세요.');
+    		f.pwd.value = '';
+    		f.pwd.focus();
+    		return false;
+    	}
+    	
+    	f.action = "you3.do";    //전송 대상(where) : 생략되면 자신의 페이지를 호출
+    	
+    	f.method = "GET"; //전송 방식(how)   : get/post
+    	
+    	/* 버튼의 경우, onsubmit() 자동실행 */
+    	/* >> html 내에서 먼저 return false했는지 확인 해야 */
+    	f.submit();
+    	
+    	return false;
+    	
+    }
+    
+</script>
+</head>
+<body>
+   <form name = "ff">
+      <table border = "1">
+          <tr>
+            <th>아이디</th>
+            <td><input name = "id"></td>
+          </tr>
+          <tr>
+            <th>비밀번호</th>
+            <td><input type = "password" name = "pwd"></td>
+          </tr>
+          <tr>
+            <td colspan = "2" align = "center">
+              <!--                                               생략 가능  -->
+              <input type = "button" value = "로그인1" onclick = "javascript:send1();">
+              <input type = "button" value = "로그인2" onclick = "send2();">
+              <!--  this : Event 주체(버튼)   -->
+              <!--  this.form : this를 소유한 폼 정보 -->
+              <input type = "button" value = "로그인3(가장 많이 사용)" onclick = "send3(this.form);">
+            
+              <!-- 버튼의 경우, onsubmit() 자동실행 -->
+              <!-- (방지하는 방법) return false;  -->
+              <button onclick="send4(this.form); return false">로그인4</button>
+              
+              <!-- 버튼 외에도, 이미지 또한 자동 onsubmit된다 -->
+              <!-- (방지하는 방법2) 함수 앞에 return 추가 -> 함수 종료 후 return -->
+              <input type = "image" src = "../image/login.png" onlick = "return send5(this.form);">
+            </td>
+          </tr>
+      </table>
+   </form>
+</body>
+</html>

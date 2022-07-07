@@ -1,0 +1,11 @@
+/*
+-- 테이블 생성
+create table member
+(
+   m_idx   int,                      -- 일련번호
+   m_name  varchar2(100)  not null,  -- 이름
+   m_id    varchar2(100)  not null,  -- 아이디
+   m_pwd   varchar2(100)  
+)
+ 
+*/

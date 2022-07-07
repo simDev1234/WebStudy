@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+    //배열선언            0     1     2    3     4     5    6     7
+    var sido_array = ['서울','경기','인천','대구','대전','부산','광주','목포'];
+    
+    //sido_array[99] = '제주';
+    //빈 공간이 undefined로 생성된다. 
+    //자바의 경우 미리 사이즈를 지정해주어야했다면, 자바스크립트는 그렇지 않음 (주의 필요)
+    sido_array[8] = 10;
+    document.write(sido_array[8].length); //문자열의 길이
+    sido_array[9] = '제주';
+    
+    document.write("sido_array's length = "+sido_array.length+"<br>");
+    
+    for (var i = 0; i < sido_array.length; i++){
+    	document.write("sido_array["+i+"]="+sido_array[i]+"<br>");
+    }
+    
+    //배열선언2
+    var fruit_array = new Array();
+    document.write("fruit_array.length = "+fruit_array.length+"<br>");
+    
+    fruit_array[0] = '참외';
+    fruit_array[1] = '수박';
+    fruit_array[2] = '딸기';
+    fruit_array[3] = '포도';
+    
+    document.write("fruit_array.length = "+fruit_array.length+"<br>");
+    
+    /* 
+    
+        for (var i in fruit_array) : 첨자반환
+        for (var fruit of fruit_array) : 요소값 반환
+        
+        for (var fruit of fruit_array){
+        	document.write(fruit + " ");
+        }
+    
+    */
+    
+    for (var i = 0; i < fruit_array.length; i++){
+    	document.write(fruit_array[i]+" ");
+    }
+    document.write("<br>");
+    
+</script>
+</head>
+<body>
+   
+</body>
+</html>

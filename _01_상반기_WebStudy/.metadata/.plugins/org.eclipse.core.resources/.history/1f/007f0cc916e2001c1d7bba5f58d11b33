@@ -1,0 +1,13 @@
+package vo;
+
+public class MemberVo {
+	int m_idx;
+	String m_name;
+	String m_id;
+	String m_pwd;
+	String m_zipcode;
+	String m_addr;
+	String m_grade;
+	String m_ip;
+	String m_regdate;
+}

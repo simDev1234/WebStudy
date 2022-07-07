@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- Ajax Library 선언 -->
+<script type="text/javascript" src = "js/httpRequest.js"></script>
+<script type="text/javascript">
+   //숫자 정규식
+   var regular_number = /^[0-9]{1,}$/;
+
+   function plus(){
+	   var su1 = document.getElementById("su1").value;
+	   var su2 = document.getElementById("su2").value;
+	   
+	   //su1의 숫자 확인
+	   if (regular_number.test(su1)==false){
+		   alert("숫자만 입력하세요.");
+		   document.getElementById("su1").value = '';
+		   document.getElementById("su1").focus();
+		   return;
+	   }
+	   
+	   //su2의 숫자 확인
+	   if (regular_number.test(su2)==false){
+		   alert("숫자만 입력하세요.");
+		   document.getElementById("su2").value = '';
+		   document.getElementById("su2").focus();
+		   return;
+	   }
+	   
+	   //foreground통신
+	   //location.href = 'calc.do?su1='+su1+'&su2='+su2;
+	   
+	   //Ajax통신
+	   var url = "calc.do";
+	   //한글이나 특수문자의 경우, 자바스크립트에서 한글처리를 해야한다. *+
+	   var param = "su1="+su1+"&su2="+su2+"&op="+encodeURIComponent("+","utf-8");
+	   
+	   sendRequest(url, param, resultFn, "GET");
+	   
+   }
+   
+   function minus(){
+	   var su1 = document.getElementById("su1").value;
+	   var su2 = document.getElementById("su2").value;
+	   
+	   //su1의 숫자 확인
+	   if (regular_number.test(su1)==false){
+		   alert("숫자만 입력하세요.");
+		   document.getElementById("su1").value = '';
+		   document.getElementById("su1").focus();
+		   return;
+	   }
+	   
+	   //su2의 숫자 확인
+	   if (regular_number.test(su2)==false){
+		   alert("숫자만 입력하세요.");
+		   document.getElementById("su2").value = '';
+		   document.getElementById("su2").focus();
+		   return;
+	   }
+	   
+	   //foreground통신
+	   //location.href = 'calc.do?su1='+su1+'&su2='+su2;
+	   
+	   //Ajax통신
+	   var url = "calc.do";
+	   var param = "su1="+su1+"&su2="+su2 + "&op=-";
+	   
+	   sendRequest(url, param, resultFn, "GET");
+   }
+   
+   function multiply(){
+	   var su1 = document.getElementById("su1").value;
+	   var su2 = document.getElementById("su2").value;
+	   
+	   //su1의 숫자 확인
+	   if (regular_number.test(su1)==false){
+		   alert("숫자만 입력하세요.");
+		   document.getElementById("su1").value = '';
+		   document.getElementById("su1").focus();
+		   return;
+	   }
+	   
+	   //su2의 숫자 확인
+	   if (regular_number.test(su2)==false){
+		   alert("숫자만 입력하세요.");
+		   document.getElementById("su2").value = '';
+		   document.getElementById("su2").focus();
+		   return;
+	   }
+	   
+	   //foreground통신
+	   //location.href = 'calc.do?su1='+su1+'&su2='+su2;
+	   
+	   //Ajax통신
+	   var url = "calc.do";
+	   var param = "su1="+su1+"&su2="+su2 + "&op=*";
+	   
+	   sendRequest(url, param, resultFn, "GET");
+   }
+   
+   function divide(){
+	   var su1 = document.getElementById("su1").value;
+	   var su2 = document.getElementById("su2").value;
+	   
+	   //su1의 숫자 확인
+	   if (regular_number.test(su1)==false){
+		   alert("숫자만 입력하세요.");
+		   document.getElementById("su1").value = '';
+		   document.getElementById("su1").focus();
+		   return;
+	   }
+	   
+	   //su2의 숫자 확인
+	   if (regular_number.test(su2)==false){
+		   alert("숫자만 입력하세요.");
+		   document.getElementById("su2").value = '';
+		   document.getElementById("su2").focus();
+		   return;
+	   }
+	   
+	   //foreground통신
+	   //location.href = 'calc.do?su1='+su1+'&su2='+su2;
+	   
+	   //Ajax통신
+	   var url = "calc.do";
+	   var param = "su1="+su1+"&su2="+su2 + "&op=/";
+	   
+	   sendRequest(url, param, resultFn, "GET");
+   }
+   
+   function resultFn(){
+	   console.log("xhr.readyState =" + xhr.readyState, "xhr.status=" + xhr.status);
+	   
+	   if (xhr.readyState == 4 && xhr.status == 200){
+		   var data = xhr.responseText; // "10"
+		   document.getElementById("result").value = data;
+	   }
+   }
+   
+</script>
+</head>
+<body>
+수1 : <input id = "su1"><br>
+수2 : <input id = "su2"><br>
+<input type = "button" value = "계산해줘(+)" onclick = "plus();">
+<input type = "button" value = "계산해줘(-)" onclick = "minus();">
+<input type = "button" value = "계산해줘(*)" onclick = "multiply();">
+<input type = "button" value = "계산해줘(/)" onclick = "divide();"><br>
+결과 : <input id = "result">
+</body>
+</html>

@@ -1,0 +1,56 @@
+package action.photo;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+
+/**
+ * Servlet implementation class PhotoInsertAction
+ */
+@WebServlet("/photo/insert.do")
+public class PhotoInsertAction extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public PhotoInsertAction() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void service(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		//1. 저장 경로 설정
+		String web_path = "/upload/";
+		String abs_path = request.getServletContext().getRealPath(web_path);
+		
+		//2. 업로드 크기 설정
+		int max_size = 1024*1024*100; //100MB
+		
+		//3. MultipartRequest
+		MultipartRequest mr = new MultipartRequest(request, abs_path, max_size, "utf-8", new DefaultFileRenamePolicy());
+		
+		
+
+		//forward
+		String forward_page = "/";
+		RequestDispatcher disp = request.getRequestDispatcher(forward_page);
+		disp.forward(request, response);
+	}
+
+}
+

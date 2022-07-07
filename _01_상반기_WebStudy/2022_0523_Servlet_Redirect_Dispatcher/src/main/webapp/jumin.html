@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+    function send(f){
+    	var regular_jumin = /^(?:[0-9]{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[1,2][0-9]|3[0,1]))-[1-8][0-9]{6}$/;
+    	
+    	var jumin_no = f.jumin_no.value;
+    	
+    	if (regular_jumin.test(jumin_no)){
+    		f.submit();
+    	}else{
+    		alert('주민번호 양식이 잘못되었습니다. 다시 입력해주세요.');
+    		f.jumin_no.value = "";
+    		f.jumin_no.focus();
+    	}
+    	
+    	f.action = 'jumin.do';
+    	f.submit();
+    	
+    }
+</script>
+</head>
+<body>
+	<form>
+	   주민번호 : <input name = "jumin_no">
+	   <input type = "button" value = "확인" onclick = "send(this.form);">
+	</form>
+</body>
+</html>

@@ -1,0 +1,9 @@
+/*
+-- 테이블 생성
+create table member
+(
+   m_idx int,      -- 일련번호
+   
+)
+ 
+*/

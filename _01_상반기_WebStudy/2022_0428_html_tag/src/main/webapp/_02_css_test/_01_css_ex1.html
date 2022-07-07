@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 
+   CSS(Cascade Style Sheet)
+   1. html 내의 style을 지정하는 언어
+   2. 방법 
+      1) inline 방식 : Element 내에 직접 지정하는 방식
+                      <p style = "">
+      2) 선언적 방식   : Document 윗쪽에 선언해서 사용(<head><style></style></head>)
+      3) 외부 파일 연결 : 다른 Document(Html 문서)에서도 재사용 가능 **webapp하위에 [css]폴더를 만들고 별도로 관리
+ -->
+<!-- 외부 파일 연결 --> 
+<!--  relation(관계)    hypertext reference -->
+<!-- 이미지나, 스타일시트 등은 브라우저에서 캐싱해둔다. 
+     >> 외부 스타일 시트 변경사항이 두번째부터는 반영이 안된다. (캐시를 지우고 새로고침해야 함)
+        - [설정] > [개인정보 및 보안] > 캐시 삭제
+ -->
+<link rel = "stylesheet" href = "../css/ex1.css"> <!-- 에러는 브라우저 console창(F12)에서 확인 --> 
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+ 
+<!-- 선언적 방식 -->
+<style type="text/css">
+    /* selector{ style 속성 : 값; } 
+       (대상)
+       ##selector 지정방식##
+       1. Element(Tag) Selector : tag {} 
+       2. ID Selector           : #id {}    <-- id 는 유일해야 한다.
+       3. class Selector        : .class{}  <-- Group 지정.
+       4. Attribute Selector    : Element[Attribute = '값'] ** CSS에는 문자 개념 X(모두 문자열) : "" 또는 '' 써도 됨.
+       5. Multi Selector        : 대상1, 대상2, 대상2{}
+    */
+    p {
+       width : 200px;
+       border : 1px solid #999999;
+       /*            x   y  blur color  */
+       box-shadow : 1px 1px 3px black;
+    }
+    /* id = p1 지정 */
+    #p1{
+       color : red;
+    }
+    /* class = "c1" */
+    .c1{
+       color : green;
+    }
+    /* Element Attribute 활용 */
+    input[type = 'button'] {
+       background-color : #cccccc;
+    }
+    input[value = '전송']{
+       color : blue;
+    }
+    input[value = '취소']{
+       color : red;
+    }
+    h1, h2, h3{
+       color : orange;
+       font-family: 휴먼엣체, 궁서체, 굴림체; /*  휴먼엣체 (없으면)-> 궁서체 -> 굴림체 */
+       /*font-family: 'Nanum Myeongjo', serif;*/
+       font-size : 20px; 
+       /* [폰트 사이즈 단위] px단위 : pixel(bitmap), 가변크기 // pt단위 : point(점), 고정크기 */
+       /* **반응형 웹에서, pixel은 화면 크기에 따라 크기가 변경된다. (pt는 그렇지 않음) */
+       font-weight : 700; /* 400 : normal, 700 : bold */
+       /* 폰트 굵기 (regular글꼴을 임의로 bold지정해주기 보다는 기존의 bold 글꼴을 가져와 쓰는게 낫다.) */
+    }
+</style>
+</head>
+<body>
+   <p style = "color : blue;">오늘은 4월 29일 금요일</p>
+   <p id = "p1">비가 온다.</p>
+   <p class = "c1">오후에 시험을 본다</p>
+   <p class = "c1">빨리 시험 보고 다른 거 해야지</p>
+   
+   메세지 : <input type = "text">
+          <input type = "button" value = "전송">
+          <input type = "button" value = "취소">
+          
+   <br>
+   <div id = "disp"> <!-- div : Division -->
+      동해물과 백두산이 마르고<br>
+      닮도록 하느님이 보우하사<br>
+      우리나라 만
+   </div>
+   <h1>첫번째로 큰 타이틀</h1>
+   <h2>두번째로 큰 타이틀</h2>
+   <h3>세번째로 큰 타이틀</h3>
+</body>
+</html>

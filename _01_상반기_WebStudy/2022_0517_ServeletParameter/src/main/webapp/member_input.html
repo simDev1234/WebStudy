@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+   table{
+      font-size: 15px;
+      font-family: 'Noto Sans KR', sans-serif;
+      width : 500px;
+   }
+   th{
+      width : 25%;
+      height : 30px;
+      vertical-align : top;
+   }
+   td{
+      padding-left:5px;
+      vertical-align : top;
+   }
+</style>
+<script type="text/javascript">
+	function send(f){
+		//필수 입력 항목
+		var name = f.name.value.trim();
+		var id   = f.id.value.trim();
+		var pwd  = f.pwd.value.trim();
+		var profile = f.profile.value.trim();
+		
+		//이름체크
+		if (name == ''){ //값이 없느냐는 질문이다. -- ' '공백으로 처리하면 X 
+			alert('이름을 입력하세요.');
+			f.name.value = '';
+			f.name.focus();
+			return;
+		}
+		
+		//아이디체크
+		if (id == ''){ //값이 없느냐는 질문이다. -- ' '공백으로 처리하면 X 
+			alert('아이디를 입력하세요.');
+			f.id.value = '';
+			f.id.focus();
+			return;
+		}
+		
+		//비밀번호체크
+		if (pwd == ''){ //값이 없느냐는 질문이다. -- ' '공백으로 처리하면 X 
+			alert('비밀번호를 입력하세요.');
+			f.pwd.value = '';
+			f.pwd.focus();
+			return;
+		}
+		
+		//자기소개 체크
+		if (profile == ''){ //값이 없느냐는 질문이다. -- ' '공백으로 처리하면 X 
+			alert('자기소개를 입력하세요.');
+			f.profile.value = '';
+			f.profile.focus();
+			return;
+		}
+		
+		//전송방식
+		f.method = 'GET';
+		
+		//전송
+		f.submit();
+	}
+</script>
+</head>
+<body>
+   <hr>
+   <h2 style = "text-align : center;">로그인 페이지</h2>
+   <hr>
+   <form action="member_register.do">
+      <table>
+         <tr>
+           <th>이름</th>
+           <td><input type = "text" name = "name"></td>
+         </tr>
+         <tr>
+           <th>아이디</th>
+           <td>
+             <input type = "text" name = "id" id = "id">
+             <input type = "button" value = "중복확인">
+           </td>
+         </tr>
+         <tr>
+           <th>비밀번호</th>
+           <td>
+             <input type = "password" name = "pwd" id = "pwd">
+           </td>
+         </tr>
+         <tr>
+           <!-- radio 사용 시에는 name을 동일하게 부여 = > 그룹화 -->
+           <th>성별</th>
+           <td>
+             <input type = "radio" name = "gender" id = "gender" checked = "checked" value = "male">
+             <label>남자</label>
+             <input type = "radio" name = "gender" id = "gender" value = "female">
+             <label>여자</label>
+             <input type = "radio" name = "gender" id = "gender" value = "etc">
+             <label>기타</label>
+           </td>
+         </tr>
+         <tr>
+           <th>취미</th>
+           <td>
+             <!-- checkbox : 같은 종류 정보끼리 변수명을 동일하게 설정 -> 서버측에서 수신시 배열로 받는다. 체크된 정보만 넘어간다. -->
+             <!-- 체크하지 않으면 아무 값도 넘어가지 않는다. -->
+             <input type = "checkbox" name = "hobby" id = "hobby" value = "book">
+             <label>독서</label>
+             <input type = "checkbox" name = "hobby" id = "hobby" value = "game">
+             <label>게임</label>
+             <input type = "checkbox" name = "hobby" id = "hobby" value = "music">
+             <label>음악감상</label>
+             <input type = "checkbox" name = "hobby" id = "hobby" value = "exercise">
+             <label>운동</label>
+           </td>
+         </tr>
+         <tr>
+           <th rowspan = "4">친구</th>
+           <td>
+             <label>친구1</label>
+             <input type = "text" name = "friend" id = "friend">
+           </td>
+         </tr>
+         <tr>
+           <td>
+             <label>친구2</label>
+             <input type = "text" name = "friend" id = "friend">
+           </td>
+         </tr>
+         <tr>
+           <td>
+             <label>친구3</label>
+             <input type = "text" name = "friend" id = "friend">
+           </td>
+         </tr>
+         <tr>
+           <td>
+             <label>친구4</label>
+             <input type = "text" name = "friend" id = "friend">
+           </td>
+         </tr>
+         <tr>
+           <th>혈액형</th>
+           <td>
+             <!-- Combo box -->
+             <select name = "blood">
+                <option value = "A">A형</option>
+                <option value = "B">B형</option>
+                <option value = "O">O형</option>
+                <option value = "AB">AB형</option>
+             </select>
+           </td>
+         </tr>
+         <tr>
+           <th>첨부파일(사진)</th>
+           <td>
+              <input type = "file" name = "photo">
+           </td>
+         </tr>
+         <tr>
+           <th>자기소개</th>
+           <td>
+              <textarea rows="5" cols="40" name = "profile"></textarea>
+           </td>
+         </tr>
+         <tr>
+           <th colspan = "2">
+              <input type = "button" value = "전송" onclick = "send(this.form);">
+              <input type = "button" value = "취소">
+           </th>
+         </tr>
+      </table>
+   </form>
+</body>
+</html>

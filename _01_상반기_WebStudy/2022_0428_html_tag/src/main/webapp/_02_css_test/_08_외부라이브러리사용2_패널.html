@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+   #box{
+      width      : 600px;
+      min-height : 300px;
+      height : auto;
+      margin     : auto;
+      margin-top : 100px;
+   }
+   h3{
+      text-align : center;
+      font-family: 'Noto Sans KR', sans-serif;
+   }
+   table{
+      font-size: 18px;
+      font-family: 'Noto Sans KR', sans-serif;
+      width : 500px;
+      margin : auto;
+   }
+   th{
+      width : 25%;
+      height : 30px;
+      vertical-align : top;
+   }
+   td{
+      padding-left:5px;
+      vertical-align : top;
+      padding-bottom : 15px;
+   }
+   tr.buttons_row > th{
+      text-align : center;
+   }
+</style>
+</head>
+<body>
+   <div id = "box" class = "panel panel-default">
+      <div class="panel-heading">
+         <h3>회원가입</h3>
+      </div>
+   	  <div class="panel-body">
+   	     <!-- table -->
+   	     <form method = "GET" action="">
+		      <table>
+		         <tr>
+		           <th>이름</th>
+		           <td><input type = "text" name = "name"></td>
+		         </tr>
+		         <tr>
+		           <th>아이디</th>
+		           <td>
+		             <input type = "text" name = "id" id = "id">
+		             <input type = "button" class="btn btn-default" value = "중복확인">
+		           </td>
+		         </tr>
+		         <tr>
+		           <th>비밀번호</th>
+		           <td>
+		             <input type = "password" name = "pwd" id = "pwd">
+		           </td>
+		         </tr>
+		         <tr>
+		           <th>성별</th>
+		           <td>
+		             <input type = "radio" name = "gender" id = "gender" checked = "checked" value = "male">
+		             <label>남자</label>
+		             <input type = "radio" name = "gender" id = "gender" value = "female">
+		             <label>여자</label>
+		             <input type = "radio" name = "gender" id = "gender" value = "etc">
+		             <label>기타</label>
+		           </td>
+		         </tr>
+		         <tr>
+		           <th>취미</th>
+		           <td>
+		             <input type = "checkbox" name = "hobby" id = "hobby" value = "book">
+		             <label>독서</label>
+		             <input type = "checkbox" name = "hobby" id = "hobby" value = "game">
+		             <label>게임</label>
+		             <input type = "checkbox" name = "hobby" id = "hobby" value = "music">
+		             <label>음악감상</label>
+		             <input type = "checkbox" name = "hobby" id = "hobby" value = "exercise">
+		             <label>운동</label>
+		           </td>
+		         </tr>
+		         <tr>
+		           <th rowspan = "4">친구</th>
+		           <td>
+		             <label>친구1</label>
+		             <input type = "text" name = "friend" id = "friend">
+		           </td>
+		         </tr>
+		         <tr>
+		           <td>
+		             <label>친구2</label>
+		             <input type = "text" name = "friend" id = "friend">
+		           </td>
+		         </tr>
+		         <tr>
+		           <td>
+		             <label>친구3</label>
+		             <input type = "text" name = "friend" id = "friend">
+		           </td>
+		         </tr>
+		         <tr>
+		           <td>
+		             <label>친구4</label>
+		             <input type = "text" name = "friend" id = "friend">
+		           </td>
+		         </tr>
+		         <tr>
+		           <th>혈액형</th>
+		           <td>
+		             <!-- Combo box -->
+		             <select name = "blood">
+		                <option value = "A">A형</option>
+		                <option value = "B">B형</option>
+		                <option value = "O">O형</option>
+		                <option value = "AB">AB형</option>
+		             </select>
+		           </td>
+		         </tr>
+		         <tr>
+		           <th>첨부파일(사진)</th>
+		           <td>
+		              <input type = "file" class="btn btn-default" name = "photo">
+		           </td>
+		         </tr>
+		         <tr>
+		           <th>자기소개</th>
+		           <td>
+		              <textarea rows="5" cols="40" name = "profile"></textarea>
+		           </td>
+		         </tr>
+		         <tr class = "buttons_row">
+		           <th colspan = "2">
+		              <input type = "submit" class="btn btn-default" value = "전송">
+		              <input type = "reset" class="btn btn-default" value = "취소">
+		           </th>
+		         </tr>
+		      </table>
+	   	</form>
+   	  </div>
+   </div>
+</body>
+</html>

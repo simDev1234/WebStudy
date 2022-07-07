@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+.submenu_type{
+	list-style : none;	
+}
+
+.submenu_type > li{
+	margin-top : 50px;
+	height : 40px;
+}
+
+.submenu_type > li > a{
+	display : block;
+	width   : 150px;
+	text-decoration : none;
+	font-family : 굴림체;
+	font-size : 18px;
+	font-weight : bold;
+	color : #333333;
+}
+
+.submenu_type > li > a:hover{
+	color : red;
+}

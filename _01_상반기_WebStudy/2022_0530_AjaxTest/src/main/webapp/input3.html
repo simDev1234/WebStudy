@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+   #disp{
+      width  : 300px;
+      /* margin : auto; */
+      margin-top : 10px;
+   }
+</style>
+<!-- jQuery Library 선언 -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+
+   //구구단 정규식 : 2~9사이의 한 자리 숫자
+   var regular_gugudan = /^[2-9]{1}$/; 
+
+   /* jQuery 초기화 */
+   //$(function(){});
+   $(document).ready(function(){
+	   
+	   //버튼 클릭시
+	   $("#btn_result").click(function(){
+		   var dan = $("#dan").val();
+		   
+		   if (regular_gugudan.test(dan)==false){
+			   alert("2~9 사이의 정수만 입력하세요.");
+			   $("#dan").val("");
+			   $("#dan").focus();
+		   }
+		   
+		   //jQuery Ajax로 요청
+		   $.ajax({
+			   url  : 'gugudan_result.jsp',
+			   data : {'dan' : dan},        //gugudan_result.jsp?dan=5
+			   success : function(result_data){
+				   //result_data : 서버로부터 응답된 데이터 (text, html 등)
+				   console.log(result_data);
+			       $("#disp").html(result_data);
+			   },
+			   error   : function(err){
+				   alert(err.responseText);
+			   }
+		   });
+		   
+	   });
+	   
+   });
+</script>
+</head>
+<body>
+단 : <input id = "dan">
+    <input type = "button" value = "보여줘" id = "btn_result">
+<hr>
+<div id = "disp"></div>
+</body>
+</html>

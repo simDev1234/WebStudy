@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+    	$("#btn1").click(function(){
+    		$("tr:even").css("background-color","red");
+    	});
+    	
+    	$("#btn2").click(function(){
+    		$("tr:even").css("background-color","transparent"); //none 사용금지
+    	});
+    	
+    	$("#btn3").click(function(){
+    		$("tr:even").css("background-color","blue");
+    	});
+    	
+    	$("#btn4").click(function(){
+    		$("tr:even").css("background-color","transparent"); //none 사용금지
+    	});
+    });
+</script>
+</head>
+<body>
+   <input type = "button" value = "홀수행배경 빨강" id = "btn1">
+   <input type = "button" value = "홀수행배경 제거" id = "btn2">
+   <input type = "button" value = "홀수행배경 파랑" id = "btn3">
+   <input type = "button" value = "홀수행배경 제거" id = "btn4">
+   <div id = "disp">작업상황표시..</div>
+   <table border = "1" width = "500px">
+      <tr><td>하나</td></tr>
+      <tr><td>둘</td></tr>
+      <tr><td>셋</td></tr>
+      <tr><td>넷</td></tr>
+      <tr><td>다섯</td></tr>
+      <tr><td>여섯</td></tr>
+   </table>
+</body>
+</html>

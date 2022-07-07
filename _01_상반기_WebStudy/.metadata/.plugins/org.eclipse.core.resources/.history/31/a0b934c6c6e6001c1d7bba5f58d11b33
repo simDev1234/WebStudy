@@ -1,0 +1,47 @@
+package action.member;
+
+import java.io.IOException;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class MemberLoginAction
+ */
+@WebServlet("/member/login.do")
+public class MemberLoginAction extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public MemberLoginAction() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void service(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		///member/login.do?m_id=dddd&m_pwd=1234
+		//1. 수신인코딩
+		request.setCharacterEncoding("utf-8");
+		
+		//2. parameter받기
+		String m_id  = request.getParameter("m_id");
+		String m_pwd = request.getParameter("m_pwd");
+
+		//forward
+		String forward_page = "/";
+		RequestDispatcher disp = request.getRequestDispatcher(forward_page);
+		disp.forward(request, response);
+	}
+
+}
+

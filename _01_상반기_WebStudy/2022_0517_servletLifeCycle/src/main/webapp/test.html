@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+    function send1(f){
+    	f.action = "lifecycle.do"
+    	f.method = "GET";
+    	f.submit();
+    }
+    
+    function send2(f){
+    	f.action = "lifecycle.do"
+       	f.method = "POST";
+       	f.submit();
+    }
+</script>
+</head>
+<body>
+   <form action="">
+      <input type = "button" value = "GET요청하기" onclick = "send1(this.form);">
+      <input type = "button" value = "POST요청하기" onclick = "send2(this.form);">
+   </form>
+</body>
+</html>

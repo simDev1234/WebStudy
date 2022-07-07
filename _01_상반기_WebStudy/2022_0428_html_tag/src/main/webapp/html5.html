@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   //캠버스 폭&높이
+   const W = 600;
+   const H = 400;
+   
+   //키 상수
+   //키 관련 이벤트 https://electronic-moongchi.tistory.com/36
+   //멀티 키 pressed : https://www.allbloggertricks.com/2021/04/determine-if-multiple-keys-are-pressed.html
+   const LEFT = 37;
+   const UP = 38;
+   const RIGHT = 39;
+   const DOWN = 40;
+   const PAUSE = 80;
+   const START = 83;
+   const SHIFT = 16;
+   const PLUS = 187; //=위치
+   const MINUS = 189;//-위치
+   const BIG = 107; //우측 +
+   const SMALL = 109; //우측 -
+   const RED = 82;
+   const GREEN = 71;
+   const BLUE = 66;
+
+   var ctx = null;   //그리기 도구
+   var timer = null; //타이머
+   
+   //배경 이미지
+   var back_img = null; 
+   
+   //공의 정보
+   var x = 300;
+   var y = 200;
+   var r = 30;
+   var ball_color = "blue"; //#0000ff or rgb(0,0,255)
+   
+   //공의 이동 방향
+   var bRight = true; //좌우 
+   var bDown  = true; //상하
+   
+   //키보드 이벤트
+   // p : pause (정지)
+   // s : start (시작)
+   
+   // + : 공의 크기 크게 (최대치 : 150)
+   // - : 공의 크기 작게 (최소치 : 10)
+   var shiftPressed = false;
+   var plusPressed = false;
+   var minusPressed = false;
+   
+   //색상 변경
+   // r : Red
+   // g : Green
+   // b : Blue;
+   //                          e라는 변수에 키가 눌렸을 때의 정보를 전달
+   window.onkeydown = function(e){
+	   var key = e.keyCode;
+	   console.log(key);
+	   
+	   //방향 처리
+	   if (key == LEFT){
+		   bRight = false;
+	   }else if (key == RIGHT){
+		   bRight = true;
+	   }else if (key == UP){
+		   bDown = false;
+	   }else if (key == DOWN){
+		   bDown = true;
+	   }
+	   
+	   //정지/시작
+	   if (key == PAUSE){
+		   stopTimer();
+	   }else if (key == START){
+		   startTimer();
+	   }
+	   
+	   //크기 조절 관련 키보드 눌렀는가
+	   if (key == SHIFT){
+		   shiftPressed = true;
+	   }
+	   if (key == PLUS){
+		   plusPressed = true;
+	   }
+	   if (key == MINUS){
+		   minusPressed = true;
+	   }
+	   
+	   //우측 +-키 눌렀는지
+	   if (key == BIG){
+		   ball_big();
+	   }else if (key == SMALL){
+		   ball_small();
+	   }
+	   
+	   //색상 변경
+	   if (key == RED){
+		   ball_color = 'red';
+	   }else if (key == GREEN){
+		   ball_color = 'green';
+	   }else if (key == BLUE){
+		   ball_color = 'blue';
+	   }
+	   
+   };
+   
+  
+   window.onkeyup = function(e){
+	   
+	 var key = e.keyCode;
+	   
+	 //크기 조절 관련 키보드 땠는가
+	   if (key == SHIFT){
+		   shiftPressed = false;
+	   }
+	   if (key == PLUS){
+		   plusPressed = false;
+	   }
+	   if (key == MINUS){
+		   minusPressed = false;
+	   }
+   };
+   
+   window.onload = function(){
+	   
+	   //이미지로드
+	   back_img = new Image();
+	   back_img.src = "image/ball_background.png";
+	   
+	   //로드가 완료가 되면 해당 함수를 호출
+	   /* back_img.onload = function(){
+		   alert('이미지 로딩 완료');
+	   }; */
+	   
+	   //그림판 (도화지)
+ 	   var myCanvas = document.getElementById("myCanvas");
+	   
+ 	   //그리기 도구
+	   ctx = myCanvas.getContext("2d"); 
+	   
+	   //타이머 구동
+	   startTimer();
+	   
+	   //scale
+	   ctx.scale(0.7,0.7) + "px";
+	   /* myCanvas.style.width = W*1.5 + "px";
+	   myCanvas.style.height = H*1.5 + "px"; */
+	   
+   };
+   
+   //타이머 구동
+   function startTimer(){
+	   if (timer == null) timer = setInterval(process,10); //100 FPS(Frame? per Second)
+   }
+   
+   //타이머 정지
+   function stopTimer(){
+	   clearInterval(timer);
+	   timer = null;
+   }
+   
+   function process(){
+	   draw();
+	   
+	   //공 위치를 변경
+	   move_ball();
+	   
+	   //공 사이즈 조절
+	   change_size_ball();
+   }
+   
+   function change_size_ball(){
+	   //shift와 사이즈키를 같이 눌렀을 때 사이즈 조절
+	   if (shiftPressed){
+		   if (plusPressed){
+			   ball_big();
+		   }else if (minusPressed){
+			   ball_small();
+		   }
+	   }
+   }
+   
+   function ball_big(){
+	   r++;
+	   if (r > 150) r = 150;
+   }
+   
+   function ball_small(){
+	   r--;
+	   if (r < 10) r = 10;
+   }
+   
+   
+   function draw(){
+	   
+	   //이전 화면 지우기
+	   //ctx.fillStyle = "black";
+	   //ctx.fillRect(0,0,W,H);
+	   
+	   //배경 이미지 출력
+	   ctx.drawImage(back_img,0,0);
+	   
+	   //공 그리기
+	   draw_ball();
+	   
+   }
+   
+   function draw_ball(){
+	                                      //color1위치,반지름  color2위치,반지름
+	   var radgrad = ctx.createRadialGradient(x-r/3,y-r/3,0,x-r/3,y-r/3,r*2); 
+	   radgrad.addColorStop(0, '#ffffff'); //시작 색상 : white
+	   radgrad.addColorStop(1, ball_color); //끝 색상 
+	   ctx.beginPath();
+	   ctx.fillStyle = radgrad; 
+	   ctx.arc(x,y,r,0,Math.PI*2,true);
+	   ctx.fill(); 
+
+   } 
+   
+   var gan = 3;
+   function move_ball(){
+	   //좌우 이동
+	   if(bRight){
+		   x = x + gan;
+	   }else{
+		   x = x - gan;
+	   }
+	   
+	   //상하 이동
+	   if(bDown)
+		   y = y + gan;
+	   else
+		   y = y - gan;
+	   
+	   //오른쪽 벽에 닿았는가
+	   if ((x + r) > W) bRight = false;
+	   else if ((x - r) < 0) bRight = true;
+	   
+	   //윗쪽벽에 닿았냐
+	   if ((y - r) < 0) bDown = true;
+	   if ((y + r) > H) bDown = false;
+   }
+   
+   function change_color(){
+ 	  ball_color = document.getElementById("custom_color").value;
+   }
+</script>
+</head>
+<body>
+   <canvas id = "myCanvas" width = "600" height = "400"></canvas>
+   
+   <hr>
+   
+   <input type = "button" value = "◀" onclick="bRight=false;">
+   <input type = "button" value = "▶" onclick="bRight=true;">
+   <input type = "button" value = "▲" onclick="bDown=false;">
+   <input type = "button" value = "▼" onclick="bDown=true;">
+   
+   <hr>
+   
+   <input type = "button" value = "red" onclick="ball_color = 'red';">
+   <input type = "button" value = "green" onclick="ball_color = 'green';">
+   <input type = "button" value = "blue" onclick="ball_color = 'blue';">
+   <input type = "button" value = "cyan" onclick="ball_color = 'cyan';">
+   <input type = "button" value = "magenta" onclick="ball_color = 'magenta';">
+   <input type = "button" value = "orange" onclick="ball_color = 'orange';">
+   <input type = "button" value = "silver" onclick="ball_color = 'silver';">
+   <input type = "color" value = "custom" id = "custom_color">
+   <input type = "button" value = "적용" onclick = "change_color();">
+
+   <hr>
+   
+   <input type = "button" value = "공 크게" onclick="ball_big();">
+   <input type = "button" value = "공 작게" onclick="ball_small();">
+   
+</body>
+</html>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- sawon영역의 mapper -->
+<mapper namespace="sawon">
+   <!-- 사원목록 조회 -->
+   <!--    id = ex.X강의실(구분)   반환타입  -->
+   <select id = "sawon_list" resultType="sawon">
+       select * from sawon
+   </select>
+   
+   <!-- 부서별 조회 -->
+   <select id = "sawon_list_deptno" parameterType = "int" resultType = "sawon">
+       select * from sawon where deptno = #{deptno}
+   </select>
+   
+   <!-- 입사연도별 조회 -->
+   <!-- Map map = new HashMap();
+        map.put("start",1988);
+        map.put("end",1993);
+    -->
+   <select id = "sawon_list_sahire_year" parameterType = "java.util.Map" resultType = "sawon">
+       select * from sawon 
+       where to_number(to_char(sahire,'YYYY')) between #{start} and #{end}
+   </select>
+   
+   <!-- 만약 DB의 칼럼명과 Vo의 변수명이 다를 경우  -->
+   <!-- 
+      <select id = "sawon_list" resultMap="sawonMap">
+          select * from sawon
+      </select>
+     
+      <resultMap type = "vo.SawonVo" id = "sawonMap">
+          <result column = "sabun" property = "sabun1"/>
+          <result column = "saname" property = "irum"/>
+      </resultMap>
+    -->
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+

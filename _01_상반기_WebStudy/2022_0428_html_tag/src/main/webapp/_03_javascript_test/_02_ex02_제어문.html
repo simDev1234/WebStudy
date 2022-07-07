@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+   /* for문 */
+   for (let i = 0; i < 5; i++){
+	   document.write(i + "<br>");
+   }
+   document.write("------------------------------<br>");
+   
+   //짝수 홀수 구분
+   for (let i = 0; i < 5; i++){
+	   if (i % 2 == 0){
+		   document.write("<font color = 'red'>");
+	   }else{
+		   document.write("<font color = 'blue'>");
+	   }
+	   document.write(i);
+	   document.write("</font><br>");
+   }
+   document.write("------------------------------<br>");
+   
+   /* switch문 
+   var msg;
+   var su = window.prompt("숫자만 입력하세요."); //프롬프트는 문자로 들어옴
+   switch (parseInt(su)){
+      case 0 : msg = "Zero"; break;
+      case 1 : msg = "One"; break;
+      case 2 : msg = "Two"; break;
+      case 3 : msg = "Three"; break;
+      case 4 : msg = "Four"; break;
+      default : msg = "Number";
+   }
+   document.write(su + "은(는) " + msg + "<br>");*/
+   
+   var str = "<table border = '1'>";
+   var dan = 1;
+   var textColor = 111111;
+   
+   //바깥 : 행 (곱할 수 : 1~9)
+   for (let k = 0; k <= 9; k++){
+	   str = str + "<tr>";
+	   if (k == 0){
+		   //안쪽 : 열 (단 : 1~9)
+		   for (var dan = 1; dan <= 9; dan++){
+			   str = str + "<th>" + dan +"단</th>";
+		   }
+	   }
+	   else{
+		   //안쪽 : 열 (단 : 1~9)
+		   for (var dan = 1; dan <= 9; dan++){
+			   str = str + "<td>" + dan + "X" + k + "=" + dan*k + "</td>";
+		   }
+	   }
+	   str = str + "</tr>";
+   }
+   str = str + "</table>";
+   
+   document.write(str);
+
+   //Debugging
+   console.log(str);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

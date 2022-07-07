@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+.toolContent{ margin : auto; }
+
+.toolTitle{ font-weight : bold; margin-bottom:15px;}
+
+.toolBox{ width : 100%; height : 100%; }

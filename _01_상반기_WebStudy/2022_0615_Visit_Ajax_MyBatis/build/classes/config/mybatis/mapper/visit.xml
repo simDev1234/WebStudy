@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="visit">
+   <select id = "visit_list" resultType = "visit">
+       SELECT * FROM visit ORDER BY idx DESC
+   </select>
+ 
+   <!-- 조건별 검색 : Dynamic Query -->
+   <!-- 태그 안의 실행할 명령이 있으면, 그 명령에 접두어를 붙인다. -->
+   <!-- 
+        prefixOverrides = "or" : 
+        where 다음에 바로 or가 나오면 그걸 제거하라는 것 
+        
+        prefixOverrides = "or/and" : 
+        where 다음에 바로 or 또는 and가 나오면 그걸 제거하라는 것
+   -->
+   <select id = "visit_list_condition" parameterType = "java.util.Map" resultType = "visit">
+       select * from visit
+       <trim prefix = "where" prefixOverrides = "or|and"> 
+          <if test = "name!=null">
+             name like '%' || #{name} || '%'
+          </if>
+          <if test = "content!=null">
+             or content like '%' || #{content} || '%'
+          </if>
+       </trim>
+       order by idx desc
+   </select>
+   
+   <select id = "visit_list_idx" parameterType = "int" resultType = "visit">
+       select * from visit where idx=#{idx}
+   </select>
+   
+   <insert id = "visit_insert" parameterType = "visit">
+      insert into visit values(seq_visit_idx.nextVal, #{name}, #{content},#{pwd},#{ip},sysdate)
+   </insert>
+   
+   <delete id = "visit_delete" parameterType = "int">
+       delete from visit where idx = #{idx}
+   </delete>
+   
+   <update id="visit_update" parameterType = "visit">
+       update visit set name = #{name}, content = #{content} where idx = #{idx}
+   </update>
+</mapper>

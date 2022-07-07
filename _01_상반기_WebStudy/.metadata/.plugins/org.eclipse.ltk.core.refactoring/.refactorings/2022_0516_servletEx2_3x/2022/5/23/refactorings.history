@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;myutil&apos; to &apos;2022_0530_AjaxTest/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;2022_0516_servletEx2_3x&apos;&#x0D;&#x0A;- Destination element: &apos;2022_0530_AjaxTest/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;myutil&apos;" description="Copy folder" destination="=2022_0530_AjaxTest/src\/main\/java" element1="src/main/java/myutil" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1653965501058" units="0" version="1.0"/>
+</session>
